@@ -1,0 +1,86 @@
+@mixin surface {
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid #ffffff24;
+  border-radius: 1.625rem;
+  color: #d4dbe1;
+  background:
+    radial-gradient(440px 280px at 30% 0%, #ffffff24, #ffffff0a 40%, transparent 70%),
+    radial-gradient(140% 120% at 0% 0%, #ffffff20, transparent 45%),
+    linear-gradient(180deg, #141414, #050505);
+  box-shadow: 0 2rem 6rem #0009, inset 0 1px 0 #ffffff14;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color-scheme: dark;
+}
+
+@mixin backdrop {
+  background: transparent;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+@mixin close-button {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  place-items: center;
+  padding: 0;
+  border: 1px solid #ffffff24;
+  border-radius: 50%;
+  color: #e1e5e9;
+  background: linear-gradient(180deg, #ffffff12, #ffffff06);
+  box-shadow: inset 0 1px 0 #ffffff0d;
+  cursor: pointer;
+  touch-action: manipulation;
+
+  &:focus-visible {
+    outline: 2px solid #eef1f4;
+    outline-offset: 4px;
+  }
+
+  @media (hover: hover) {
+    &:hover {
+      border-color: #c6cfd7;
+      background: #272b30;
+    }
+  }
+}
+
+@mixin title {
+  margin: 0;
+  color: #e1e5e9;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2.25rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+
+  @media (max-width: 640px), (max-height: 500px) and (pointer: coarse) {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+}
+
+@mixin finish {
+  border-color: rgba(190, 204, 219, 0.18);
+  background:
+    linear-gradient(
+      125deg,
+      transparent 8%,
+      rgba(214, 226, 239, 0.035) 32%,
+      transparent 55%,
+      rgba(165, 184, 208, 0.02) 78%,
+      transparent 96%
+    ),
+    radial-gradient(
+      ellipse 120% 85% at 35% -25%,
+      rgba(205, 220, 235, 0.04),
+      transparent 72%
+    ),
+    linear-gradient(165deg, #151618 0%, #0d0e10 55%, #08090b 100%);
+  box-shadow:
+    0 2rem 6rem #0009,
+    inset 0 1px 0 #dce7f014,
+    inset 0 -1px 0 #a8b9cc08;
+}

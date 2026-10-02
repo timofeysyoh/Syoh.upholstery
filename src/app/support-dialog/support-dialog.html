@@ -1,0 +1,78 @@
+<dialog
+  #supportDialog
+  class="support-dialog"
+  id="support-dialog"
+  aria-labelledby="support-title"
+  aria-describedby="support-subtitle"
+>
+  <header class="support-header">
+    <div class="support-heading">
+      <h2 id="support-title">Підтримка</h2>
+      <p id="support-subtitle">Поширені запитання</p>
+    </div>
+    <button
+      class="support-close"
+      type="button"
+      aria-label="Закрити підтримку"
+      title="Закрити підтримку"
+      autofocus
+      (click)="close()"
+    >
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+      </svg>
+    </button>
+  </header>
+
+  <div class="support-content">
+    <div class="support-list">
+      @for (item of questions; track item.id) {
+        <section class="support-item" [class.is-expanded]="expandedQuestion() === item.id">
+          <h3>
+            <button
+              class="support-question"
+              type="button"
+              [id]="'support-question-' + item.id"
+              [attr.aria-expanded]="expandedQuestion() === item.id"
+              [attr.aria-controls]="'support-answer-' + item.id"
+              (click)="toggleQuestion(item.id)"
+            >
+              <span>{{ item.question }}</span>
+              <svg class="support-toggle" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="m9 5 7 7-7 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </h3>
+          <div
+            class="support-answer"
+            role="region"
+            [id]="'support-answer-' + item.id"
+            [attr.aria-labelledby]="'support-question-' + item.id"
+            [attr.aria-hidden]="expandedQuestion() !== item.id"
+            [attr.inert]="expandedQuestion() === item.id ? null : ''"
+          >
+            <div class="support-answer-inner">
+              <p>{{ item.answer }}</p>
+            </div>
+          </div>
+        </section>
+      }
+    </div>
+
+    <div class="support-actions">
+      <button
+        class="support-contact"
+        type="button"
+        aria-haspopup="dialog"
+        aria-controls="support-request-dialog"
+        (click)="requestFormRequested.emit()"
+      >
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+          <path d="M8 12H8.009M11.991 12H12M15.991 12H16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22Z" stroke="#ffffff" stroke-width="1.5" />
+        </svg>
+        <span>Зверніться до служби підтримки</span>
+      </button>
+    </div>
+  </div>
+</dialog>

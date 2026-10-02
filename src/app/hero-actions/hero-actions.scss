@@ -1,0 +1,270 @@
+@property --syoh-button-angle-1 {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: -75deg;
+}
+
+@property --syoh-button-angle-2 {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: -45deg;
+}
+
+:host {
+  display: block;
+  width: 100%;
+  max-width: 35rem;
+  margin-inline: auto;
+  --button-hover-time: 400ms;
+  --button-hover-ease: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.hero-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.875rem, 4.5vw, 3.25rem);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-size: clamp(0.65rem, 2.4vw, 0.95rem);
+}
+
+.button-wrap {
+  position: relative;
+  z-index: 2;
+  min-width: 0;
+  border-radius: 999px;
+  background: transparent;
+  pointer-events: none;
+  transition: transform var(--button-hover-time) var(--button-hover-ease);
+}
+
+.button-shadow {
+  --shadow-cutoff: 2em;
+  position: absolute;
+  top: calc(0px - var(--shadow-cutoff) / 2);
+  left: calc(0px - var(--shadow-cutoff) / 2);
+  width: calc(100% + var(--shadow-cutoff));
+  height: calc(100% + var(--shadow-cutoff));
+  overflow: visible;
+  filter: blur(clamp(2px, 0.125em, 12px));
+  pointer-events: none;
+  transition: filter var(--button-hover-time) var(--button-hover-ease);
+}
+
+.button-shadow::after {
+  position: absolute;
+  z-index: 0;
+  top: calc(var(--shadow-cutoff) - 0.5em);
+  left: calc(var(--shadow-cutoff) - 0.875em);
+  box-sizing: border-box;
+  width: calc(100% - var(--shadow-cutoff) - 0.25em);
+  height: calc(100% - var(--shadow-cutoff) - 0.25em);
+  padding: 0.125em;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgb(0 0 0 / 60%), rgb(0 0 0 / 30%));
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  opacity: 1;
+  content: '';
+  transition: top var(--button-hover-time) var(--button-hover-ease),
+    opacity var(--button-hover-time) var(--button-hover-ease);
+}
+
+button {
+  --border-width: clamp(1px, 0.0625em, 4px);
+  position: relative;
+  z-index: 3;
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 44px;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(-75deg, rgb(255 255 255 / 5%), rgb(255 255 255 / 20%), rgb(255 255 255 / 5%));
+  box-shadow:
+    inset 0 0.125em 0.125em rgb(0 0 0 / 5%),
+    inset 0 -0.125em 0.125em rgb(255 255 255 / 50%),
+    0 0.25em 0.125em -0.125em rgb(0 0 0 / 20%),
+    inset 0 0 0.1em 0.25em rgb(255 255 255 / 20%);
+  color: #e4e9ed;
+  font: inherit;
+  text-align: center;
+  -webkit-backdrop-filter: blur(clamp(1px, 0.125em, 4px));
+  backdrop-filter: blur(clamp(1px, 0.125em, 4px));
+  -webkit-tap-highlight-color: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform var(--button-hover-time) var(--button-hover-ease),
+    box-shadow var(--button-hover-time) var(--button-hover-ease),
+    backdrop-filter var(--button-hover-time) var(--button-hover-ease);
+}
+
+button:focus-visible {
+  outline: 2px solid #e8eff5;
+  outline-offset: 5px;
+}
+
+button:disabled {
+  color: #aeb8c1;
+  cursor: default;
+}
+
+button span {
+  position: relative;
+  display: grid;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 44px;
+  place-items: center;
+  padding: 0.875em clamp(0.5rem, 1.2vw, 1.1rem);
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 0.25em 0.05em rgb(0 0 0 / 25%);
+  transition: text-shadow var(--button-hover-time) var(--button-hover-ease);
+}
+
+button span::after {
+  position: absolute;
+  z-index: 3;
+  top: calc(var(--border-width) / 2);
+  left: calc(var(--border-width) / 2);
+  box-sizing: border-box;
+  width: calc(100% - var(--border-width));
+  height: calc(100% - var(--border-width));
+  overflow: clip;
+  border-radius: 999px;
+  background: linear-gradient(
+    var(--syoh-button-angle-2, -45deg),
+    rgb(255 255 255 / 0%) 0%,
+    rgb(255 255 255 / 32%) 40% 50%,
+    rgb(255 255 255 / 0%) 55%
+  );
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+  background-size: 200% 200%;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  content: '';
+  transition: background-position calc(var(--button-hover-time) * 1.25) var(--button-hover-ease),
+    --syoh-button-angle-2 calc(var(--button-hover-time) * 1.25) var(--button-hover-ease);
+}
+
+button::after {
+  position: absolute;
+  z-index: 1;
+  top: calc(0px - var(--border-width) / 2);
+  left: calc(0px - var(--border-width) / 2);
+  box-sizing: border-box;
+  width: calc(100% + var(--border-width));
+  height: calc(100% + var(--border-width));
+  padding: var(--border-width);
+  border-radius: 999px;
+  background: conic-gradient(
+      from var(--syoh-button-angle-1, -75deg) at 50% 50%,
+      rgb(0 0 0 / 50%),
+      transparent 5% 40%,
+      rgb(0 0 0 / 50%) 50%,
+      transparent 60% 95%,
+      rgb(0 0 0 / 50%)
+    ),
+    linear-gradient(180deg, rgb(255 255 255 / 50%), rgb(255 255 255 / 50%));
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  box-shadow: inset 0 0 0 calc(var(--border-width) / 2) rgb(255 255 255 / 50%);
+  pointer-events: none;
+  content: '';
+  transition: --syoh-button-angle-1 500ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  button:enabled:hover {
+    transform: scale(0.975);
+    -webkit-backdrop-filter: blur(0.01em);
+    backdrop-filter: blur(0.01em);
+    box-shadow:
+      inset 0 0.125em 0.125em rgb(0 0 0 / 5%),
+      inset 0 -0.125em 0.125em rgb(255 255 255 / 50%),
+      0 0.15em 0.05em -0.1em rgb(0 0 0 / 25%),
+      inset 0 0 0.05em 0.1em rgb(255 255 255 / 50%);
+  }
+
+  button:enabled:hover span { text-shadow: 0.025em 0.025em 0.025em rgb(0 0 0 / 25%); }
+  button:enabled:hover span::after { background-position: 25% 50%; }
+  button:enabled:hover::after { --syoh-button-angle-1: -125deg; }
+
+  .button-wrap:has(button:enabled:hover) .button-shadow { filter: blur(clamp(2px, 0.0625em, 6px)); }
+  .button-wrap:has(button:enabled:hover) .button-shadow::after { top: calc(var(--shadow-cutoff) - 0.875em); }
+}
+
+button:enabled:active span::after {
+  --syoh-button-angle-2: -15deg;
+  background-position: 50% 15%;
+}
+
+button:enabled:active::after { --syoh-button-angle-1: -75deg; }
+
+.button-wrap:has(button:enabled:active) {
+  transform: rotate3d(1, 0, 0, 25deg);
+}
+
+.button-wrap:has(button:enabled:active) button {
+  box-shadow:
+    inset 0 0.125em 0.125em rgb(0 0 0 / 5%),
+    inset 0 -0.125em 0.125em rgb(255 255 255 / 50%),
+    0 0.125em 0.125em -0.125em rgb(0 0 0 / 20%),
+    inset 0 0 0.1em 0.25em rgb(255 255 255 / 20%),
+    0 0.225em 0.05em rgb(0 0 0 / 5%),
+    0 0.25em 0 rgb(255 255 255 / 75%),
+    inset 0 0.25em 0.05em rgb(0 0 0 / 15%);
+}
+
+.button-wrap:has(button:enabled:active) .button-shadow { filter: blur(clamp(2px, 0.125em, 12px)); }
+.button-wrap:has(button:enabled:active) .button-shadow::after {
+  top: calc(var(--shadow-cutoff) - 0.5em);
+  opacity: 0.75;
+}
+.button-wrap:has(button:enabled:active) span { text-shadow: 0.025em 0.25em 0.05em rgb(0 0 0 / 25%); }
+
+@media (hover: none) and (pointer: coarse) {
+  button:enabled:active span::after { --syoh-button-angle-2: -45deg; }
+}
+
+@media (max-width: 640px), (max-height: 500px) and (pointer: coarse) {
+  .hero-actions {
+    width: min(88%, 17.5rem);
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+    margin-inline: auto;
+    font-size: 1rem;
+  }
+
+  button,
+  button span {
+    min-height: 3.5rem;
+  }
+
+  button span {
+    padding: 1rem 1.25rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button-wrap,
+  .button-shadow,
+  .button-shadow::after,
+  button,
+  button::after,
+  button span,
+  button span::after {
+    transition: none;
+  }
+
+  .button-wrap:has(button:enabled:active),
+  button:enabled:hover { transform: none; }
+}

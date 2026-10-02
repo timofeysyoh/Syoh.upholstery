@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Схематична ілюстрація ремонту обода керма з відкритим металевим каркасом</title>
+  <defs>
+    <linearGradient id="rim" x1="427" y1="188" x2="754" y2="559" gradientUnits="userSpaceOnUse"><stop stop-color="#273739"/><stop offset=".5" stop-color="#172327"/><stop offset="1" stop-color="#0c1114"/></linearGradient>
+    <linearGradient id="trim" x1="402" y1="190" x2="819" y2="592" gradientUnits="userSpaceOnUse"><stop stop-color="#a8b8b8" stop-opacity=".7"/><stop offset=".5" stop-color="#425c5e" stop-opacity=".5"/><stop offset="1" stop-color="#7d999a" stop-opacity=".65"/></linearGradient>
+    <linearGradient id="metal" x1="681" y1="185" x2="811" y2="338" gradientUnits="userSpaceOnUse"><stop stop-color="#7d999a"/><stop offset=".45" stop-color="#becac8"/><stop offset="1" stop-color="#637f83"/></linearGradient>
+    <linearGradient id="hub" x1="569" y1="336" x2="636" y2="442" gradientUnits="userSpaceOnUse"><stop stop-color="#273739"/><stop offset="1" stop-color="#10181b"/></linearGradient>
+  </defs>
+  <path d="M659 183A201 201 0 0 1 800 357" stroke="#0c1114" stroke-width="21" stroke-linecap="round"/>
+  <path d="M659 183A201 201 0 0 1 800 357" stroke="url(#metal)" stroke-width="13" stroke-linecap="round"/>
+  <path d="M681 190A201 201 0 0 1 797 333" stroke="#e0e7e3" stroke-opacity=".65" stroke-width="2" stroke-linecap="round"/>
+  <path d="M821 328A226 226 0 1 1 685 165L686 180 673 183 677 196 666 211A177 177 0 1 0 773 338L785 344 791 331 805 335Z" fill="url(#rim)" stroke="url(#trim)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M651 164A216 216 0 0 0 386 350M389 421A216 216 0 0 0 498 565M699 567A216 216 0 0 0 816 382" stroke="#91a6a8" stroke-opacity=".25" stroke-width="2" stroke-linecap="round"/>
+  <path d="M431 341 554 355 548 407 429 386Q425 364 431 341ZM646 355 768 341Q775 362 769 386L652 407ZM565 421 578 545Q600 550 622 545L635 421Z" fill="#1f2f33" stroke="url(#trim)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M450 357 544 369M657 369 750 357M588 454 593 528M612 454 607 528" stroke="#91a6a8" stroke-opacity=".35" stroke-width="2" stroke-linecap="round"/>
+  <path d="M551 332Q600 317 649 332L666 374Q670 402 650 425L632 438H568L550 425Q530 402 534 374Z" fill="url(#hub)" stroke="url(#trim)" stroke-width="3"/>
+  <path d="M554 348Q600 334 646 348M565 418Q600 426 635 418" stroke="#91a6a8" stroke-opacity=".4" stroke-width="2" stroke-linecap="round"/>
+  <path d="M668 164 666 182 657 189M815 347 801 351 803 362M650 190l-6 11M800 367l11 5" stroke="#91a6a8" stroke-opacity=".5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M666 211 677 196 673 183 686 180 685 165M773 338 785 344 791 331 805 335 821 328" stroke="#b2c4c4" stroke-opacity=".55" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M723 217 730 209M750 243l9-7M772 275l10-4M789 309l10-2" stroke="#40595e" stroke-opacity=".45" stroke-width="2" stroke-linecap="round"/>
+  <path d="M737 194 775 166H834" stroke="#698184" stroke-opacity=".45" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="735" cy="196" r="4" fill="#91a6a8" fill-opacity=".6"/>
+  <path d="M377 646H823" stroke="#415359" stroke-opacity=".45"/>
+</svg>

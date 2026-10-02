@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Схематична ілюстрація дверної карти автомобіля</title>
+  <defs>
+    <linearGradient id="edge" x1="266" y1="211" x2="931" y2="598" gradientUnits="userSpaceOnUse"><stop stop-color="#a5a5bc" stop-opacity=".7"/><stop offset=".5" stop-color="#595674" stop-opacity=".6"/><stop offset="1" stop-color="#9290a6" stop-opacity=".45"/></linearGradient>
+    <linearGradient id="panel" x1="600" y1="211" x2="600" y2="597" gradientUnits="userSpaceOnUse"><stop stop-color="#201f2a"/><stop offset="1" stop-color="#101015"/></linearGradient>
+  </defs>
+  <path d="M199 216Q402 199 578 226L963 264Q992 271 995 300L958 560Q953 585 923 590H285Q257 587 249 561L187 257Q180 229 199 216Z" fill="url(#panel)" stroke="url(#edge)" stroke-width="3"/>
+  <path d="M202 240Q409 224 575 249L963 287M207 263Q411 249 572 273L964 309" stroke="#aaa7bd" stroke-opacity=".45" stroke-width="2"/>
+  <path d="M229 293Q416 281 568 305L944 339 913 422 725 451 322 414Z" fill="#111218" stroke="#77758c" stroke-opacity=".5" stroke-width="2"/>
+  <path d="m297 348 183-6 157 36 199-1Q853 378 857 393L842 418 624 420 466 378H302Z" fill="#2b2938" stroke="url(#edge)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="m312 359 161-5 157 37h197" stroke="#b2acc8" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+  <path d="m760 312 151 15-13 37-130-9Z" fill="#2d2a3c" stroke="#a6a0bd" stroke-opacity=".55" stroke-width="2" stroke-linejoin="round"/>
+  <path d="m778 326 111 11M492 359l40 9m-16-4-3 12m28-5 21 6" stroke="#b9b4ca" stroke-opacity=".6" stroke-width="2" stroke-linecap="round"/>
+  <path d="m496 470 392-15-25 85H514Z" fill="#0d0e13" stroke="#6e6a80" stroke-opacity=".65" stroke-width="2" stroke-linejoin="round"/>
+  <path d="m516 485 348-12M523 522H846" stroke="#5b576f" stroke-opacity=".6"/>
+  <ellipse cx="364" cy="491" rx="62" ry="57" fill="#0c0d12" stroke="#8f8a9f" stroke-opacity=".6" stroke-width="2"/>
+  <ellipse cx="364" cy="491" rx="53" ry="48" stroke="#565067" stroke-opacity=".8"/>
+  <path d="M342 451V531M353 447V535M364 443V539M375 447V535M386 451V531M327 462H401M318 473H410M315 484H413M315 495H413M318 506H410M323 517H405" stroke="#625c75" stroke-opacity=".48"/>
+  <path d="M264 310Q416 305 564 325L733 343M284 553Q596 580 923 557" stroke="#9990b4" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="3 7"/>
+  <path d="M214 632H981" stroke="#51495f" stroke-opacity=".45"/>
+</svg>

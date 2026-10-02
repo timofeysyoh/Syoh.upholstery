@@ -1,0 +1,37 @@
+<div class="hero-actions" role="group" aria-label="Розділи майстерні">
+  <div class="button-wrap">
+    <button
+      type="button"
+      aria-haspopup="dialog"
+      aria-controls="gallery-dialog"
+      (click)="galleryRequested.emit()"
+    >
+      <span>Галерея</span>
+    </button>
+    <div class="button-shadow" aria-hidden="true"></div>
+  </div>
+
+  <div class="button-wrap">
+    <button
+      type="button"
+      aria-haspopup="dialog"
+      aria-controls="contact-dialog"
+      (click)="contactRequested.emit()"
+    >
+      <span>Контакт</span>
+    </button>
+    <div class="button-shadow" aria-hidden="true"></div>
+  </div>
+
+  <div class="button-wrap">
+    <button
+      type="button"
+      aria-haspopup="dialog"
+      aria-controls="support-dialog"
+      (click)="supportRequested.emit()"
+    >
+      <span>Підтримка</span>
+    </button>
+    <div class="button-shadow" aria-hidden="true"></div>
+  </div>
+</div>

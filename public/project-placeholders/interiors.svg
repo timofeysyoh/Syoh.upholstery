@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Схематична ілюстрація автомобільного салону</title>
+  <defs>
+    <linearGradient id="metal" x1="600" y1="165" x2="600" y2="650" gradientUnits="userSpaceOnUse"><stop stop-color="#a9b0b7" stop-opacity=".7"/><stop offset="1" stop-color="#545b63" stop-opacity=".3"/></linearGradient>
+    <linearGradient id="surface" x1="600" y1="230" x2="600" y2="620" gradientUnits="userSpaceOnUse"><stop stop-color="#191d22"/><stop offset="1" stop-color="#0d0f12"/></linearGradient>
+  </defs>
+  <path d="M155 575V335C176 256 229 174 311 145H889C971 174 1024 256 1045 335V575" stroke="#343c46" stroke-width="2"/>
+  <path d="M247 303 318 175H881L953 303" stroke="url(#metal)" stroke-width="3"/>
+  <path d="M309 199H891M237 304H963" stroke="#46525e" stroke-opacity=".45"/>
+  <path d="M182 336C280 292 414 309 600 316C786 309 920 292 1018 336L980 436 707 438 674 609H526L493 438 220 436Z" fill="url(#surface)" stroke="url(#metal)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M210 351C317 324 449 336 516 347M684 347C751 336 883 324 990 351" stroke="#748291" stroke-opacity=".5" stroke-width="2"/>
+  <rect x="530" y="344" width="140" height="66" rx="5" fill="#090b0e" stroke="#697582" stroke-opacity=".7" stroke-width="2"/>
+  <path d="M542 359H658M542 366H596" stroke="#718ba9" stroke-opacity=".5"/>
+  <path d="M552 442H648M549 453H651M559 529H641L647 586H553Z" stroke="#667482" stroke-opacity=".5" stroke-width="2"/>
+  <path d="M594 553V490Q600 479 606 490V553" stroke="#a4aeb9" stroke-opacity=".6" stroke-width="3"/>
+  <circle cx="356" cy="384" r="73" fill="#0d1014" stroke="#a4afbb" stroke-opacity=".65" stroke-width="9"/>
+  <circle cx="356" cy="384" r="62" stroke="#485664" stroke-width="2"/>
+  <path d="M286 376 332 387M380 387 426 376M346 404 333 450M366 404 379 450" stroke="#7a8794" stroke-opacity=".65" stroke-width="8" stroke-linecap="round"/>
+  <rect x="330" y="366" width="52" height="40" rx="15" fill="#1b222a" stroke="#8c99a8" stroke-opacity=".5" stroke-width="2"/>
+  <path d="M230 374H264M452 374H486M744 374H812M832 374H900M920 374H954" stroke="#697684" stroke-opacity=".65" stroke-width="3"/>
+  <path d="M151 652V557Q151 523 194 511L211 446Q216 424 245 424H336Q365 424 370 446L386 511Q429 523 429 557V652M771 652V557Q771 523 814 511L831 446Q836 424 865 424H956Q985 424 990 446L1006 511Q1049 523 1049 557V652" fill="#0d1014" stroke="url(#metal)" stroke-width="3"/>
+  <path d="M212 511H386M814 511H990M183 648V563Q183 544 207 537H373Q397 544 397 563V648M803 648V563Q803 544 827 537H993Q1017 544 1017 563V648" stroke="#515d6a" stroke-opacity=".6" stroke-width="2"/>
+  <path d="M116 666H1084" stroke="#343d47" stroke-opacity=".6"/>
+</svg>

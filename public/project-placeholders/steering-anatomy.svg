@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Схематична ілюстрація анатомічного керма з вираженими хватами та пласким низом</title>
+  <defs>
+    <linearGradient id="rim" x1="441" y1="150" x2="764" y2="589" gradientUnits="userSpaceOnUse"><stop stop-color="#303b3e"/><stop offset=".45" stop-color="#172125"/><stop offset="1" stop-color="#0c1114"/></linearGradient>
+    <linearGradient id="trim" x1="369" y1="159" x2="831" y2="602" gradientUnits="userSpaceOnUse"><stop stop-color="#b2c1c0" stop-opacity=".75"/><stop offset=".48" stop-color="#50666b" stop-opacity=".55"/><stop offset="1" stop-color="#8a9ea1" stop-opacity=".7"/></linearGradient>
+    <linearGradient id="grip-left" x1="376" y1="292" x2="469" y2="421" gradientUnits="userSpaceOnUse"><stop stop-color="#344145"/><stop offset=".55" stop-color="#243236"/><stop offset="1" stop-color="#141e22"/></linearGradient>
+    <linearGradient id="grip-right" x1="824" y1="292" x2="731" y2="421" gradientUnits="userSpaceOnUse"><stop stop-color="#344145"/><stop offset=".55" stop-color="#243236"/><stop offset="1" stop-color="#141e22"/></linearGradient>
+    <linearGradient id="hub" x1="583" y1="331" x2="617" y2="449" gradientUnits="userSpaceOnUse"><stop stop-color="#2b373b"/><stop offset="1" stop-color="#10181b"/></linearGradient>
+  </defs>
+  <path d="M600 122C744 122 860 227 860 372C860 449 833 514 789 565L753 604Q736 620 712 620H488Q464 620 447 604L411 565C367 514 340 449 340 372C340 227 456 122 600 122ZM600 181C674 181 731 219 751 268Q760 283 745 293L730 303Q720 310 726 322L746 336Q755 343 747 354Q736 365 750 376Q759 384 749 394Q739 405 750 416Q759 425 747 438C734 475 709 511 686 542H514C491 511 466 475 453 438Q441 425 450 416Q461 405 451 394Q441 384 450 376Q464 365 453 354Q445 343 454 336L474 322Q480 310 470 303L455 293Q440 283 449 268C469 219 526 181 600 181Z" fill="url(#rim)" fill-rule="evenodd" stroke="url(#trim)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M385 278Q399 251 419 238L449 268Q440 283 455 293L470 303Q480 310 474 322L454 336Q445 343 453 354Q464 365 450 376Q441 384 451 394Q461 405 450 416Q441 425 453 438L419 457Q397 449 382 425Q365 397 366 366Q366 317 385 278Z" fill="url(#grip-left)" stroke="#71878c" stroke-opacity=".45" stroke-width="2"/>
+  <path d="M815 278Q801 251 781 238L751 268Q760 283 745 293L730 303Q720 310 726 322L746 336Q755 343 747 354Q736 365 750 376Q759 384 749 394Q739 405 750 416Q759 425 747 438L781 457Q803 449 818 425Q835 397 834 366Q834 317 815 278Z" fill="url(#grip-right)" stroke="#71878c" stroke-opacity=".45" stroke-width="2"/>
+  <path d="M446 349 552 354 560 418 452 400Q441 385 450 376Q460 365 446 349ZM754 349 648 354 640 418 748 400Q759 385 750 376Q740 365 754 349ZM560 430H640L635 542H565Z" fill="#243135" stroke="url(#trim)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M471 366 539 369 543 396 473 384ZM729 366 661 369 657 396 727 384Z" fill="#111a1e" stroke="#8c9fa3" stroke-opacity=".4" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M582 451H618L614 528H586Z" fill="#111a1e" stroke="#8c9fa3" stroke-opacity=".4" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M552 334Q600 320 648 334L670 370Q677 395 659 422L637 446H563L541 422Q523 395 530 370Z" fill="url(#hub)" stroke="url(#trim)" stroke-width="3"/>
+  <path d="M552 352Q600 340 648 352M566 430Q600 438 634 430" stroke="#a3b8b9" stroke-opacity=".35" stroke-width="2" stroke-linecap="round"/>
+  <path d="M429 226C470 175 528 145 600 145C672 145 730 175 771 226M388 468Q416 530 466 578Q477 589 493 589H707Q723 589 734 578Q784 530 812 468" stroke="#91a6a8" stroke-opacity=".3" stroke-width="2" stroke-linecap="round"/>
+  <path d="M400 281Q385 316 386 353M413 291Q425 302 443 309M800 281Q815 316 814 353M787 291Q775 302 757 309" stroke="#b2c4c4" stroke-opacity=".4" stroke-width="3" stroke-linecap="round"/>
+  <path d="M442 329Q431 340 438 352M437 375Q430 384 438 394M438 414Q431 425 440 436M758 329Q769 340 762 352M763 375Q770 384 762 394M762 414Q769 425 760 436" stroke="#a3b8b9" stroke-opacity=".35" stroke-width="2" stroke-linecap="round"/>
+  <path d="M505 563H695" stroke="#a3b8b9" stroke-opacity=".4" stroke-width="3" stroke-linecap="round"/>
+  <path d="M376 665H824" stroke="#415359" stroke-opacity=".45"/>
+</svg>

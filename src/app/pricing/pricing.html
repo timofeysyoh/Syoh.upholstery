@@ -1,0 +1,243 @@
+<section class="pricing" id="prices" aria-labelledby="prices-title">
+  <div class="pricing-inner">
+    <header class="pricing-heading">
+      <h2 id="prices-title">Каталог послуг</h2>
+
+      <div class="pricing-toolbar">
+        <div class="pricing-controls">
+          <div class="pricing-search" [class.is-active]="query().trim().length > 0" role="search" aria-label="Пошук послуг">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.5" />
+              <path d="m16 16 4.5 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+            <label class="sr-only" for="pricing-search">Пошук за назвою або описом послуги</label>
+            <input
+              #pricingSearch
+              id="pricing-search"
+              type="search"
+              placeholder="Пошук послуг…"
+              autocomplete="off"
+              aria-controls="pricing-results"
+              [value]="query()"
+              (input)="setQuery(pricingSearch.value)"
+            />
+            @if (query()) {
+              <button
+                class="search-clear"
+                type="button"
+                aria-label="Очистити пошук"
+                title="Очистити пошук"
+                (click)="setQuery(''); pricingSearch.focus()"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </button>
+            }
+          </div>
+
+          <div class="pricing-sort pricing-category" [class.is-active]="selectedCategory() !== 'all'">
+            <label class="sr-only" for="pricing-category">Елемент або предмет</label>
+            <select
+              #pricingCategory
+              id="pricing-category"
+              aria-controls="pricing-results"
+              [value]="selectedCategory()"
+              (change)="selectCategory(pricingCategory.value)"
+            >
+              @for (category of categories(); track category.id) {
+                <option
+                  [value]="category.id"
+                  [disabled]="category.id !== 'all' && category.count === 0 && category.id !== selectedCategory()"
+                >{{ category.label }} ({{ category.count }})</option>
+              }
+            </select>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+
+          <div class="pricing-sort pricing-service-type" [class.is-active]="selectedServiceType() !== 'all'">
+            <label class="sr-only" for="pricing-service-type">Тип роботи</label>
+            <select
+              #pricingServiceType
+              id="pricing-service-type"
+              aria-controls="pricing-results"
+              [value]="selectedServiceType()"
+              (change)="selectServiceType(pricingServiceType.value)"
+            >
+              @for (serviceType of serviceTypes(); track serviceType.id) {
+                <option
+                  [value]="serviceType.id"
+                  [disabled]="serviceType.id !== 'all' && serviceType.count === 0 && serviceType.id !== selectedServiceType()"
+                >{{ serviceType.label }} ({{ serviceType.count }})</option>
+              }
+            </select>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+
+          <div class="pricing-sort" [class.is-active]="sortOrder() !== 'default'">
+            <label class="sr-only" for="pricing-sort">Сортування за початковою вартістю послуги</label>
+            <select
+              #pricingSort
+              id="pricing-sort"
+              aria-controls="pricing-results"
+              [value]="sortOrder()"
+              (change)="setSortOrder(pricingSort.value)"
+            >
+              <option value="default">За замовчуванням</option>
+              <option value="price-asc">Спочатку дешевші</option>
+              <option value="price-desc">Спочатку дорожчі</option>
+            </select>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <div class="pricing-results-meta">
+        <p class="pricing-counter" role="status" aria-live="polite" aria-atomic="true">
+          Показано: {{ filteredItems().length }} із {{ items.length }}
+        </p>
+        @if (filtersActive()) {
+          <button class="filter-reset" type="button" (click)="resetFilters(); pricingSearch.focus()">
+            Скинути фільтри
+          </button>
+        }
+      </div>
+    </header>
+
+    <ul class="pricing-list" id="pricing-results" role="list">
+      @for (item of filteredItems(); track item.id) {
+        <li class="card">
+          <div class="card-badges">
+            <span class="image-badge" [attr.data-service-type]="item.serviceType">{{ item.serviceType }}</span>
+            @if (item.serviceNote; as note) {
+              <div
+                class="price-info service-info"
+                (pointerenter)="showPriceInfoOnHover('service-' + item.id, $event)"
+                (pointerleave)="hidePriceInfoOnLeave('service-' + item.id, $event)"
+                (focusin)="showPriceInfo('service-' + item.id)"
+                (focusout)="hidePriceInfoOnBlur('service-' + item.id, $event)"
+              >
+                <button
+                  class="price-info-button service-info-button"
+                  type="button"
+                  [attr.aria-label]="'Додаткова інформація: ' + item.title"
+                  [attr.aria-expanded]="openPriceInfoId() === 'service-' + item.id"
+                  [attr.aria-controls]="'service-note-' + item.id"
+                  [attr.aria-describedby]="openPriceInfoId() === 'service-' + item.id ? 'service-note-' + item.id : null"
+                  (click)="togglePriceInfo('service-' + item.id)"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M12 11v6M12 7.5v.01" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" />
+                  </svg>
+                </button>
+                <div
+                  class="price-info-panel service-info-panel"
+                  role="tooltip"
+                  [id]="'service-note-' + item.id"
+                  [hidden]="openPriceInfoId() !== 'service-' + item.id"
+                >
+                  <div class="price-info-surface">
+                    <p class="service-info-text">{{ note }}</p>
+                  </div>
+                </div>
+              </div>
+            }
+          </div>
+          <div class="top">
+            <img
+              [src]="item.image"
+              [alt]="item.imageAlt"
+              width="1200"
+              height="750"
+              loading="lazy"
+              decoding="async"
+            />
+            <h3 class="title">{{ item.title }}</h3>
+          </div>
+          <div class="card-content">
+            <p class="desc">{{ item.description }}</p>
+            <div class="price-block">
+              @if (!item.priceOptionsInInfo && item.priceOptions; as options) {
+                <dl class="price-options">
+                  @for (option of options; track option.id) {
+                    <div class="price-option">
+                      <dt>{{ option.label }}</dt>
+                      <dd>{{ option.from && option.price !== null ? 'від ' : '' }}{{ formatPrice(option.price) }}</dd>
+                    </div>
+                  }
+                </dl>
+              } @else {
+                <div class="price-summary">
+                  <div>
+                    <p class="price">{{ item.priceFrom && item.price !== null ? 'від ' : '' }}{{ formatPrice(item.price) }}</p>
+                    @if (item.priceUnit) {
+                      <p class="price-unit">{{ item.priceUnit }}</p>
+                    }
+                  </div>
+                  @if (item.priceOptionsInInfo ? item.priceOptions : item.priceBreakdown; as breakdown) {
+                    <div
+                      class="price-info"
+                      (pointerenter)="showPriceInfoOnHover(item.id, $event)"
+                      (pointerleave)="hidePriceInfoOnLeave(item.id, $event)"
+                      (focusin)="showPriceInfo(item.id)"
+                      (focusout)="hidePriceInfoOnBlur(item.id, $event)"
+                    >
+                      <button
+                        class="price-info-button"
+                        type="button"
+                        [attr.aria-label]="'Варіанти вартості: ' + item.title"
+                        [attr.aria-expanded]="openPriceInfoId() === item.id"
+                        [attr.aria-controls]="'price-breakdown-' + item.id"
+                        [attr.aria-describedby]="openPriceInfoId() === item.id ? 'price-breakdown-' + item.id : null"
+                        (click)="togglePriceInfo(item.id)"
+                      >
+                        <span class="price-currency-icon" aria-hidden="true">₴</span>
+                        <span>Варіанти</span>
+                      </button>
+                      <div
+                        class="price-info-panel"
+                        role="tooltip"
+                        [id]="'price-breakdown-' + item.id"
+                        [hidden]="openPriceInfoId() !== item.id"
+                      >
+                        <div class="price-info-surface">
+                          <p class="price-info-heading">{{ item.priceOptionsTitle ?? (item.priceOptionsInInfo ? 'Варіанти послуги' : 'Окремі елементи') }}</p>
+                          <dl class="price-options">
+                            @for (part of breakdown; track part.id) {
+                              <div class="price-option">
+                                <dt>{{ part.label }}</dt>
+                                <dd>{{ part.from && part.price !== null ? 'від ' : '' }}{{ formatPrice(part.price) }}</dd>
+                              </div>
+                            }
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                  }
+                </div>
+              }
+              @if (item.priceNote) {
+                <p class="price-note">{{ item.priceNote }}</p>
+              }
+            </div>
+          </div>
+        </li>
+      } @empty {
+        <li class="pricing-empty">
+          <h3>Нічого не знайдено</h3>
+          <p>Змініть пошук, елемент чи тип роботи або скиньте фільтри.</p>
+          <button class="empty-reset" type="button" (click)="resetFilters(); pricingSearch.focus()">
+            Показати всі послуги
+          </button>
+        </li>
+      }
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Схематична ілюстрація оббивки автомобільного сидіння</title>
+  <defs>
+    <linearGradient id="metal" x1="475" y1="158" x2="727" y2="618" gradientUnits="userSpaceOnUse"><stop stop-color="#b4aaa0" stop-opacity=".75"/><stop offset=".55" stop-color="#6b5d50" stop-opacity=".6"/><stop offset="1" stop-color="#9e8b73" stop-opacity=".6"/></linearGradient>
+    <linearGradient id="leather" x1="600" y1="205" x2="600" y2="621" gradientUnits="userSpaceOnUse"><stop stop-color="#25231f"/><stop offset="1" stop-color="#0e1012"/></linearGradient>
+    <clipPath id="stitches"><path d="M503 324H697L709 460Q600 480 491 460Z"/></clipPath>
+  </defs>
+  <path d="M495 139Q503 117 524 117H676Q697 117 705 139L710 194Q710 213 691 216H509Q490 213 490 194Z" fill="#1a1b1b" stroke="url(#metal)" stroke-width="3"/>
+  <path d="M514 141H687M509 154 510 193H690V154" stroke="#938a7f" stroke-opacity=".4" stroke-width="2"/>
+  <path d="M541 217V238M659 217V238" stroke="#b4aaa0" stroke-opacity=".5" stroke-width="6"/>
+  <path d="M478 237Q457 243 448 268L410 449Q402 474 422 491L442 516H758L778 491Q798 474 790 449L752 268Q743 243 722 237Z" fill="url(#leather)" stroke="url(#metal)" stroke-width="3"/>
+  <path d="M497 245 476 328 464 449Q464 476 489 491H711Q736 476 736 449L724 328 703 245M484 295Q600 326 716 295" stroke="#8d8070" stroke-opacity=".6" stroke-width="2"/>
+  <path d="M503 324H697L709 460Q600 480 491 460Z" fill="#17191a" stroke="#8b7d6a" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"/>
+  <g clip-path="url(#stitches)" stroke="#867965" stroke-opacity=".27" stroke-width="1.5">
+    <path d="M300 310 560 490M340 310 600 490M380 310 640 490M420 310 680 490M460 310 720 490M500 310 760 490M540 310 800 490M580 310 840 490M620 310 880 490M660 310 920 490M700 310 960 490"/>
+    <path d="M900 310 640 490M860 310 600 490M820 310 560 490M780 310 520 490M740 310 480 490M700 310 440 490M660 310 400 490M620 310 360 490M580 310 320 490M540 310 280 490M500 310 240 490"/>
+  </g>
+  <path d="M438 505Q600 482 762 505L796 581Q799 602 777 609Q600 642 423 609Q401 602 404 581Z" fill="url(#leather)" stroke="url(#metal)" stroke-width="3"/>
+  <path d="M474 509 454 580Q600 601 746 580L726 509M457 592Q600 615 743 592" stroke="#978b78" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M469 536Q600 551 731 536M463 558Q600 575 737 558M509 513 500 585M554 506 550 591M600 503V594M646 506 650 591M691 513 700 585" stroke="#8c7c65" stroke-opacity=".3" stroke-width="1.5"/>
+  <path d="M459 623V651H502V628M698 628V651H741V623M380 669H820" stroke="#786e60" stroke-opacity=".45" stroke-width="2"/>
+  <path d="M470 254 452 334 438 448Q433 467 449 481M730 254 748 334 762 448Q767 467 751 481" stroke="#b9a88c" stroke-opacity=".35" stroke-width="2" stroke-dasharray="3 7"/>
+</svg>

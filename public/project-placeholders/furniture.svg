@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Схематична ілюстрація перетяжки дивана</title>
+  <defs>
+    <linearGradient id="edge" x1="330" y1="218" x2="861" y2="601" gradientUnits="userSpaceOnUse"><stop stop-color="#b2bdc8" stop-opacity=".8"/><stop offset=".5" stop-color="#586675" stop-opacity=".6"/><stop offset="1" stop-color="#8997a5" stop-opacity=".6"/></linearGradient>
+    <linearGradient id="leather" x1="600" y1="228" x2="600" y2="577" gradientUnits="userSpaceOnUse"><stop stop-color="#252d36"/><stop offset="1" stop-color="#10151b"/></linearGradient>
+  </defs>
+  <path d="M307 393V273Q307 224 356 224H844Q893 224 893 273V393" fill="url(#leather)" stroke="url(#edge)" stroke-width="3"/>
+  <path d="M334 381V275Q334 251 359 251H580Q593 251 593 269V388M607 388V269Q607 251 620 251H841Q866 251 866 275V381" fill="#1b232d" stroke="#8392a2" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M351 365V281Q351 269 366 269H570M630 269H834Q849 269 849 281V365" stroke="#a4afbb" stroke-opacity=".35" stroke-width="2" stroke-dasharray="3 7" stroke-linecap="round"/>
+  <path d="M330 406Q600 386 870 406L890 515H310Z" fill="url(#leather)" stroke="url(#edge)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M346 408Q464 391 589 405V456Q461 467 333 453ZM611 405Q736 391 854 408L867 453Q739 467 611 456Z" fill="#222b35" stroke="#8998a8" stroke-opacity=".65" stroke-width="2"/>
+  <path d="M355 421Q466 408 575 419M625 419Q734 408 845 421M349 443Q463 453 577 443M623 443Q737 453 851 443" stroke="#a4afbb" stroke-opacity=".3" stroke-width="2" stroke-dasharray="3 7"/>
+  <path d="M275 541V382Q275 352 303 352H332Q356 352 356 378V480H844V378Q844 352 868 352H897Q925 352 925 382V541Q925 569 897 569H303Q275 569 275 541Z" fill="url(#leather)" stroke="url(#edge)" stroke-width="3"/>
+  <path d="M291 528V386Q291 369 307 369H326Q340 369 340 385V496H860V385Q860 369 874 369H893Q909 369 909 386V528M300 551H900" stroke="#8f9dac" stroke-opacity=".4" stroke-width="2"/>
+  <path d="M342 569 335 609H361L371 569M829 569 839 609H865L858 569" fill="#11171e" stroke="#82909f" stroke-opacity=".6" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M250 630H950" stroke="#4b5867" stroke-opacity=".4" stroke-width="2"/>
+</svg>

@@ -14,10 +14,14 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render title', async () => {
+  it('should render the brand identity', async () => {
     const fixture = TestBed.createComponent(App);
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, brandsyoh');
+    expect(compiled.querySelector('h1')?.textContent).toContain('СЬОХ');
+    expect(compiled.querySelector('.signature')?.textContent).toContain('Syoh');
+    expect(compiled.querySelector('.descriptor')?.textContent).toContain(
+      'Майстерня автомобільних інтер’єрів',
+    );
   });
 });

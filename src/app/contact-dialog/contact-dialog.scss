@@ -1,0 +1,365 @@
+@use '../dialog-theme' as dialog;
+
+:host {
+  display: contents;
+}
+
+.contact-dialog {
+  width: min(19rem, calc(100vw - 2rem));
+  height: 38rem;
+  max-width: none;
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid #ffffff24;
+  border-radius: 1.625rem;
+  color: #d4dbe1;
+  @include dialog.finish;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color-scheme: dark;
+}
+
+.contact-dialog[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-dialog::backdrop {
+  background: transparent;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+.contact-header,
+.contact-content {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.25rem 1rem 1.5rem;
+}
+
+.contact-header h2 {
+  margin: 0;
+  color: #e1e5e9;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+}
+
+.contact-close {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  place-items: center;
+  padding: 0;
+  border: 1px solid #ffffff24;
+  border-radius: 50%;
+  color: #e1e5e9;
+  background: linear-gradient(180deg, #ffffff12, #ffffff06);
+  box-shadow: inset 0 1px 0 #ffffff0d;
+  cursor: pointer;
+  transition: background 250ms ease, border-color 250ms ease;
+}
+
+.contact-close:hover {
+  border-color: #c6cfd7;
+  background: #272b30;
+}
+
+.contact-close:focus-visible,
+.card-container:focus-visible {
+  outline: 2px solid #eef1f4;
+  outline-offset: 4px;
+}
+
+.contact-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  padding: 1rem 1.5rem 1.5rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #454b52 #0c0c0c;
+}
+
+.contact-message {
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  flex: 1 0 auto;
+  flex-direction: column;
+}
+
+.contact-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 1.25rem;
+}
+
+.contact-avatar {
+  display: grid;
+  width: 2.75rem;
+  height: 2.75rem;
+  flex-shrink: 0;
+  place-items: center;
+  border: 1px solid #ffffff1f;
+  border-radius: 50%;
+  color: #eef1f4;
+  background: radial-gradient(circle at 30% 25%, #4a4c4e, #111 75%);
+  box-shadow: inset 0 1px 0 #ffffff20, 0 0.35rem 1rem #0004;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.4rem;
+}
+
+.contact-profile-info {
+  min-width: 0;
+}
+
+.contact-name {
+  margin: 0 0 0.25rem;
+  color: #f0f1f3;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.contact-role {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  color: #a1a6ad;
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.activity-indicator {
+  width: 0.45rem;
+  height: 0.45rem;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #77818c;
+}
+
+.activity-indicator.is-active {
+  background: #b8ff5a;
+  box-shadow: 0 0 0.5rem #b8ff5a66;
+}
+
+.contact-note {
+  margin-inline: -1.5rem;
+  padding: 1.25rem 1.5rem;
+  border-block: 1px solid #ffffff0f;
+  background: linear-gradient(180deg, #0c0c0cf0, #090909b3);
+}
+
+#contact-description {
+  margin: 0;
+  color: #bec5cc;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-wrap: pretty;
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: auto;
+  padding-top: 1.25rem;
+}
+
+.card-container {
+  position: relative;
+  display: flex;
+  width: 250px;
+  max-width: 100%;
+  min-height: 44px;
+  height: auto;
+  flex-shrink: 0;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0;
+  margin-inline: auto;
+  padding: 0.5em 1em;
+  border: 0;
+  border-radius: 0.5em;
+  font: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.card-container .icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.card-container .icon-container svg {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.instagram-card {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(350, 100%, 60%);
+  box-shadow: 0 0.5rem 1.5rem #ff33551a, inset 0 1px 0 #ffffff3d;
+  transition: background-color 250ms ease, box-shadow 250ms ease;
+}
+
+a.instagram-card:hover {
+  background-color: hsl(350, 100%, 54%);
+}
+
+.telegram-card {
+  color: #fff;
+  background-color: #087db7;
+  box-shadow: 0 0.5rem 1.5rem #229ed926, inset 0 1px 0 #ffffff3d;
+  transition: background-color 250ms ease, box-shadow 250ms ease;
+}
+
+a.telegram-card:hover {
+  background-color: #066ba0;
+}
+
+.card-container:disabled {
+  cursor: not-allowed;
+}
+
+.contact-hint {
+  margin: 0;
+  color: #939ba5;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@media (hover: hover) {
+  a.instagram-card:hover {
+    box-shadow: 0 0.5rem 1.75rem #ff335533, inset 0 1px 0 #ffffff3d;
+  }
+
+  a.telegram-card:hover {
+    box-shadow: 0 0.5rem 1.75rem #229ed940, inset 0 1px 0 #ffffff3d;
+  }
+}
+
+@media (max-width: 640px), (max-height: 500px) and (pointer: coarse) {
+  .contact-dialog {
+    --contact-gutter: clamp(1.25rem, 6vw, 2rem);
+
+    inset: 0;
+    width: 100%;
+    height: 100dvh;
+    max-width: none;
+    max-height: 100dvh;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .contact-header {
+    padding: calc(1.5rem + env(safe-area-inset-top))
+      calc(var(--contact-gutter) + env(safe-area-inset-right)) 1.25rem
+      calc(var(--contact-gutter) + env(safe-area-inset-left));
+  }
+
+  .contact-header h2 {
+    font-size: clamp(2.1rem, 6vw, 2.4rem);
+  }
+
+  .contact-close {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .contact-content {
+    padding: 1.5rem calc(var(--contact-gutter) + env(safe-area-inset-right))
+      calc(clamp(2rem, 10dvh, 6rem) + env(safe-area-inset-bottom))
+      calc(var(--contact-gutter) + env(safe-area-inset-left));
+  }
+
+  .contact-message {
+    width: 100%;
+    max-width: 22rem;
+    flex: 0 0 auto;
+    margin: auto;
+  }
+
+  .contact-profile {
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .contact-avatar {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.75rem;
+  }
+
+  .contact-name {
+    font-size: 1.1rem;
+  }
+
+  .contact-role {
+    font-size: 0.9rem;
+  }
+
+  .contact-note {
+    margin-inline: 0;
+    padding: 1.25rem;
+    border: 1px solid #ffffff0f;
+    border-radius: 1.25rem;
+  }
+
+  #contact-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .contact-actions {
+    margin-top: 0;
+    padding-top: 1.75rem;
+  }
+
+  .card-container {
+    width: 100%;
+    min-height: 3.5rem;
+    justify-content: center;
+    margin-top: 0;
+    padding: 0.75rem 1rem;
+    font-size: 1.05rem;
+  }
+
+  .contact-hint {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-close,
+  .instagram-card,
+  .telegram-card {
+    transition: none;
+  }
+}

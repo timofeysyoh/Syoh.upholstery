@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Схематична ілюстрація автомобільного керма</title>
+  <defs>
+    <linearGradient id="rim" x1="440" y1="163" x2="742" y2="599" gradientUnits="userSpaceOnUse"><stop stop-color="#9da8b4" stop-opacity=".8"/><stop offset=".5" stop-color="#424e5b" stop-opacity=".65"/><stop offset="1" stop-color="#7d8997" stop-opacity=".5"/></linearGradient>
+    <linearGradient id="hub" x1="600" y1="332" x2="600" y2="472" gradientUnits="userSpaceOnUse"><stop stop-color="#222a33"/><stop offset="1" stop-color="#10141a"/></linearGradient>
+  </defs>
+  <path d="M359 375C359 242 467 134 600 134S841 242 841 375C841 499 773 617 694 626H506C427 617 359 499 359 375Z" stroke="#303b48" stroke-opacity=".6" stroke-width="2"/>
+  <path d="M385 375C385 256 481 160 600 160S815 256 815 375C815 488 757 590 684 599H516C443 590 385 488 385 375Z" fill="#10151a" stroke="url(#rim)" stroke-width="6"/>
+  <path d="M423 375C423 277 502 198 600 198S777 277 777 375C777 474 728 550 672 562H528C472 550 423 474 423 375Z" fill="#0a0d10" stroke="url(#rim)" stroke-width="3"/>
+  <path d="M404 366 506 380 533 427 420 413ZM796 366 694 380 667 427 780 413ZM551 429H649L670 563H530Z" fill="#1a222c" stroke="#6d7c8d" stroke-opacity=".6" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M431 382 492 389M708 389 769 382M564 452 552 544M636 452 648 544" stroke="#a2afbf" stroke-opacity=".45" stroke-width="2"/>
+  <path d="M498 359Q600 321 702 359L681 424Q600 486 519 424Z" fill="url(#hub)" stroke="#929fad" stroke-opacity=".75" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M522 372Q600 348 678 372M531 414Q600 459 669 414" stroke="#72849a" stroke-opacity=".6" stroke-width="2"/>
+  <path d="M466 225Q519 176 586 174M614 174Q681 176 734 225M394 351Q405 273 450 241M750 241Q795 273 806 351M402 434Q425 520 464 554M736 554Q775 520 798 434" stroke="#a4adba" stroke-opacity=".35" stroke-width="2" stroke-dasharray="3 7"/>
+  <path d="M577 170H623M565 584H635" stroke="#8499b6" stroke-opacity=".65" stroke-width="3" stroke-linecap="round"/>
+  <path d="M261 375H309M891 375H939M600 87V107M600 653V675" stroke="#566476" stroke-opacity=".45"/>
+</svg>

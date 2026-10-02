@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Схематична ілюстрація формованого поролону автомобільного сидіння</title>
+  <defs>
+    <linearGradient id="foam-top" x1="466" y1="229" x2="697" y2="549" gradientUnits="userSpaceOnUse"><stop stop-color="#343e48"/><stop offset=".58" stop-color="#252e38"/><stop offset="1" stop-color="#1b242e"/></linearGradient>
+    <linearGradient id="foam-side" x1="589" y1="481" x2="599" y2="610" gradientUnits="userSpaceOnUse"><stop stop-color="#202933"/><stop offset="1" stop-color="#10161e"/></linearGradient>
+    <linearGradient id="foam-center" x1="572" y1="302" x2="646" y2="525" gradientUnits="userSpaceOnUse"><stop stop-color="#202a34"/><stop offset=".48" stop-color="#303b46"/><stop offset="1" stop-color="#252f3a"/></linearGradient>
+    <linearGradient id="foam-bolster" x1="469" y1="252" x2="407" y2="533" gradientUnits="userSpaceOnUse"><stop stop-color="#424d59"/><stop offset=".54" stop-color="#323d49"/><stop offset="1" stop-color="#222c36"/></linearGradient>
+    <linearGradient id="foam-right" x1="755" y1="248" x2="880" y2="521" gradientUnits="userSpaceOnUse"><stop stop-color="#37424e"/><stop offset=".58" stop-color="#293440"/><stop offset="1" stop-color="#1b252f"/></linearGradient>
+    <pattern id="pores" width="43" height="37" patternUnits="userSpaceOnUse"><circle cx="7" cy="8" r="1.1" fill="#090d12" fill-opacity=".35"/><circle cx="29" cy="24" r="1.4" fill="#090d12" fill-opacity=".25"/><circle cx="18" cy="32" r=".8" fill="#a0aeba" fill-opacity=".2"/><path d="m34 8 2 1M9 24l1-1" stroke="#101722" stroke-opacity=".2" stroke-width="1.4" stroke-linecap="round"/></pattern>
+    <clipPath id="foam-silhouette"><path d="M298 507Q291 493 307 458L384 280Q398 245 435 241L762 222Q803 221 818 257L915 473Q922 487 919 505L909 553Q905 581 874 593L358 608Q320 602 306 579Z"/></clipPath>
+  </defs>
+  <path d="M298 507Q291 493 307 458L384 280Q398 245 435 241L762 222Q803 221 818 257L915 473Q922 487 919 505L909 553Q905 581 874 593L358 608Q320 602 306 579Z" fill="url(#foam-side)" stroke="#71808f" stroke-opacity=".65" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M298 507Q291 493 307 458L384 280Q398 245 435 241L762 222Q803 221 818 257L915 473Q927 503 908 520Q896 531 872 533L347 563Q311 562 298 536Z" fill="url(#foam-top)" stroke="#8e9ca9" stroke-opacity=".55" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M478 283 724 268Q749 270 759 298L808 454Q822 489 797 512L427 535Q403 521 418 486L460 313Q464 292 478 283Z" fill="#111a24" fill-opacity=".5"/>
+  <path d="M495 303 716 288Q734 289 741 313L786 454Q795 479 780 493L449 514Q430 509 438 489L478 328Q482 308 495 303Z" fill="url(#foam-center)" stroke="#647586" stroke-opacity=".6" stroke-width="2"/>
+  <path d="M413 267Q431 249 455 250L491 253Q507 257 506 274Q493 303 477 343L436 477Q431 505 412 524Q391 539 355 536L325 524Q312 515 320 492L387 313Q400 280 413 267Z" fill="url(#foam-bolster)" stroke="#8999a9" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M733 242Q764 230 786 248Q801 260 815 290L891 468Q902 492 889 508Q870 523 837 519L806 507Q791 499 783 475L753 372Q742 337 725 305L716 279Q713 250 733 242Z" fill="url(#foam-right)" stroke="#8091a2" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M334 487 398 315Q410 284 428 274Q448 263 479 267M751 255Q776 246 789 273L871 471" stroke="#abb7c5" stroke-opacity=".3" stroke-width="3" stroke-linecap="round"/>
+  <path d="M498 302 715 288M484 327 473 369M747 330 760 372" stroke="#101923" stroke-opacity=".4" stroke-width="6" stroke-linecap="round"/>
+  <path d="M474 379 750 361M461 426 766 406M449 472 780 451" stroke="#151f29" stroke-opacity=".65" stroke-width="10" stroke-linecap="round"/>
+  <path d="M474 382 750 364M461 429 766 409M449 475 780 454" stroke="#91a1b3" stroke-opacity=".4" stroke-width="3" stroke-linecap="round"/>
+  <path d="M520 313 481 493M691 300 749 478" stroke="#17222e" stroke-opacity=".4" stroke-width="5" stroke-linecap="round"/>
+  <path d="M394 539Q418 528 449 529L783 508Q810 507 830 521" stroke="#94a3b3" stroke-opacity=".4" stroke-width="3" stroke-linecap="round"/>
+  <path d="M319 551Q329 571 357 574L869 546Q891 543 905 531" stroke="#8a9bab" stroke-opacity=".4" stroke-width="2" stroke-linecap="round"/>
+  <path d="M324 580Q339 591 361 592L865 564Q885 561 896 552" stroke="#0c131c" stroke-opacity=".25" stroke-width="2" stroke-linecap="round"/>
+  <path d="m394 578 9-1m106 5 7-1m144-11 8-1m116 1 10-1" stroke="#0f1822" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+  <path d="M291 218H927V614H291Z" fill="url(#pores)" clip-path="url(#foam-silhouette)"/>
+  <path d="M346 654H866" stroke="#667788" stroke-opacity=".3"/>
+</svg>

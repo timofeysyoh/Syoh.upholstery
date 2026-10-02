@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Схематична ілюстрація ручки перемикання передач та дверної ручки</title>
+  <defs>
+    <linearGradient id="trim" x1="264" y1="235" x2="937" y2="561" gradientUnits="userSpaceOnUse"><stop stop-color="#a8b8b8" stop-opacity=".7"/><stop offset=".5" stop-color="#425c5e" stop-opacity=".5"/><stop offset="1" stop-color="#7d999a" stop-opacity=".65"/></linearGradient>
+    <linearGradient id="surface" x1="817" y1="193" x2="817" y2="556" gradientUnits="userSpaceOnUse"><stop stop-color="#202c2e"/><stop offset="1" stop-color="#0c1114"/></linearGradient>
+  </defs>
+  <path d="M177 302Q188 276 225 272H515Q548 280 557 319L541 410Q534 434 504 438H229Q187 431 178 400Z" fill="#10181b" stroke="url(#trim)" stroke-width="3"/>
+  <path d="M203 306Q214 293 240 292H495Q520 296 530 324L520 397Q515 416 491 416H241Q213 412 204 391Z" stroke="#698184" stroke-opacity=".5" stroke-width="2"/>
+  <path d="M244 334 476 320Q494 320 495 337L489 364Q486 379 468 379H291L260 392 242 377Z" fill="#222f32" stroke="url(#trim)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M263 347 469 336M285 364H460" stroke="#b2c4c4" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+  <path d="M707 562 739 470Q751 447 782 443H873Q904 447 916 470L948 562Q945 584 925 588H730Q710 584 707 562Z" fill="#10181c" stroke="url(#trim)" stroke-width="3"/>
+  <path d="M730 557 758 483Q771 467 790 465H865Q884 467 897 483L925 557Q924 567 913 569H742Q731 567 730 557Z" stroke="#667e81" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M766 548 801 445 805 351M889 548 854 445 850 351M790 550 817 431V361M865 550 838 431V361" stroke="#566e74" stroke-opacity=".6" stroke-width="2"/>
+  <path d="M765 260Q767 207 809 198H846Q888 207 890 260L873 345Q867 369 847 378H808Q788 369 782 345Z" fill="url(#surface)" stroke="url(#trim)" stroke-width="3"/>
+  <path d="M779 253Q780 221 812 215H843Q875 221 876 253Q827 279 779 253Z" fill="#273739" stroke="#91a6a8" stroke-opacity=".7" stroke-width="2"/>
+  <path d="M795 281 808 352M860 281 847 352M788 280 801 349M867 280 854 349" stroke="#8fa9ac" stroke-opacity=".45" stroke-width="2" stroke-dasharray="3 6"/>
+  <path d="M802 233H853M813 228V244M828 228V248M843 228V244" stroke="#a3b8b9" stroke-opacity=".6" stroke-width="2"/>
+  <path d="M620 210V548" stroke="#45595e" stroke-opacity=".35" stroke-dasharray="3 9"/>
+  <path d="M189 489H539M723 627H932" stroke="#415359" stroke-opacity=".45"/>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Схематична ілюстрація шкіряного чохла важеля перемикання передач</title>
+  <defs>
+    <linearGradient id="trim" x1="319" y1="255" x2="889" y2="624" gradientUnits="userSpaceOnUse"><stop stop-color="#a8b8b8" stop-opacity=".7"/><stop offset=".5" stop-color="#425c5e" stop-opacity=".5"/><stop offset="1" stop-color="#7d999a" stop-opacity=".65"/></linearGradient>
+    <linearGradient id="leather" x1="492" y1="267" x2="698" y2="567" gradientUnits="userSpaceOnUse"><stop stop-color="#273739"/><stop offset=".46" stop-color="#182529"/><stop offset="1" stop-color="#0c1114"/></linearGradient>
+    <linearGradient id="front-panel" x1="591" y1="327" x2="610" y2="588" gradientUnits="userSpaceOnUse"><stop stop-color="#263639"/><stop offset="1" stop-color="#111a1e"/></linearGradient>
+    <linearGradient id="knob" x1="580" y1="145" x2="620" y2="221" gradientUnits="userSpaceOnUse"><stop stop-color="#273739"/><stop offset="1" stop-color="#10181b"/></linearGradient>
+  </defs>
+  <path d="M335 461Q346 435 378 432L753 416Q783 415 805 439L901 552Q918 571 900 594L879 615Q870 624 851 625L337 641Q313 641 302 622L287 599Q280 585 291 563Z" fill="#0c1114" stroke="url(#trim)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M351 462Q359 449 380 448L750 433Q771 432 786 449L882 560Q892 572 876 584L858 597Q850 604 833 604L347 620Q328 620 318 608L308 594Q301 584 310 568Z" fill="#1c292d" stroke="#91a6a8" stroke-opacity=".55" stroke-width="2"/>
+  <path d="M374 473 750 453 857 572 341 590Z" fill="#10181b" stroke="#526d73" stroke-opacity=".55" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M571 270Q587 277 628 269L645 337Q651 363 677 396L733 441Q774 477 822 526L850 568Q807 580 765 579L673 590Q644 602 611 590L513 601Q465 598 430 589L342 587Q356 553 395 524L458 460Q500 424 531 378Q550 347 556 320Z" fill="url(#leather)" stroke="url(#trim)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M592 284Q581 354 566 399Q553 451 561 487L543 582Q577 592 611 590Q641 601 673 590L651 487Q631 438 620 387L610 282" fill="url(#front-panel)"/>
+  <path d="M575 286Q559 354 534 400L480 471Q465 507 430 563L417 580M624 282Q637 351 652 390L706 469Q719 514 766 562L779 574" stroke="#91a6a8" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>
+  <path d="M580 290Q565 357 540 404L487 475Q472 511 438 565L428 580M618 287Q631 354 646 394L699 473Q712 518 758 566L766 575" stroke="#a3b8b9" stroke-opacity=".5" stroke-width="2" stroke-dasharray="3 7" stroke-linecap="round"/>
+  <path d="M595 291Q583 360 574 403Q562 451 570 487L554 579M607 290 616 390Q626 440 644 488L662 580" stroke="#6d898c" stroke-opacity=".65" stroke-width="2" stroke-linecap="round"/>
+  <path d="M600 300Q590 363 582 406Q570 453 578 488L564 580M600 315 608 391Q618 443 636 490L653 580" stroke="#a3b8b9" stroke-opacity=".35" stroke-width="2" stroke-dasharray="3 7" stroke-linecap="round"/>
+  <path d="M410 526Q452 511 489 484L475 539Q465 564 476 585M521 427Q503 482 511 520L494 576M685 428Q721 457 750 481M710 498Q727 538 724 572M383 571 438 543M783 532 821 559" stroke="#526d73" stroke-opacity=".6" stroke-width="2" stroke-linecap="round"/>
+  <path d="M570 253Q597 244 626 251L630 270Q602 285 568 273Z" fill="#202c2e" stroke="url(#trim)" stroke-width="2"/>
+  <path d="M575 261Q599 268 624 259" stroke="#a3b8b9" stroke-opacity=".5" stroke-width="2" stroke-dasharray="3 5"/>
+  <path d="M588 208H610L614 248Q601 254 586 249Z" fill="#111a1e" stroke="#698184" stroke-opacity=".6" stroke-width="2"/>
+  <path d="M559 171Q560 140 583 135H611Q634 140 635 171L630 197Q626 212 613 218H582Q568 212 564 197Z" fill="url(#knob)" stroke="url(#trim)" stroke-width="3"/>
+  <path d="M570 164Q572 149 587 148H608Q623 149 624 164Q599 180 570 164Z" fill="#273739" stroke="#91a6a8" stroke-opacity=".45" stroke-width="2"/>
+  <path d="M333 671H867" stroke="#415359" stroke-opacity=".45"/>
+</svg>

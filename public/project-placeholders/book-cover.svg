@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Схематична ілюстрація шкіряної обкладинки книги</title>
+  <defs>
+    <linearGradient id="edge" x1="399" y1="161" x2="814" y2="604" gradientUnits="userSpaceOnUse"><stop stop-color="#b3beca" stop-opacity=".8"/><stop offset=".5" stop-color="#5b6978" stop-opacity=".6"/><stop offset="1" stop-color="#8997a5" stop-opacity=".6"/></linearGradient>
+    <linearGradient id="leather" x1="499" y1="186" x2="721" y2="568" gradientUnits="userSpaceOnUse"><stop stop-color="#28313a"/><stop offset=".55" stop-color="#1b232c"/><stop offset="1" stop-color="#10161d"/></linearGradient>
+    <linearGradient id="pages" x1="600" y1="541" x2="600" y2="609" gradientUnits="userSpaceOnUse"><stop stop-color="#4b5663"/><stop offset="1" stop-color="#222b35"/></linearGradient>
+  </defs>
+  <path d="M396 243 690 153Q709 147 724 161L853 518Q859 535 842 543L525 638Q508 643 496 630L380 308Q372 286 377 266Q381 249 396 243Z" fill="#111821" stroke="url(#edge)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M408 274 692 191 823 534 522 623Q505 625 498 611L383 292" fill="url(#pages)" stroke="#7e8d9e" stroke-opacity=".5" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M508 605 816 514M503 594 812 503M499 583 808 492" stroke="#9ba8b7" stroke-opacity=".3" stroke-width="2"/>
+  <path d="M388 217 686 127Q703 123 711 140L848 496Q853 510 838 515L523 610Q506 615 497 596L367 258Q359 236 388 217Z" fill="url(#leather)" stroke="url(#edge)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M413 211 546 603M390 224 519 592" stroke="#94a3b4" stroke-opacity=".4" stroke-width="2"/>
+  <path d="M436 224 686 149 826 496 555 578Z" stroke="#afbbc7" stroke-opacity=".4" stroke-width="2" stroke-dasharray="3 7" stroke-linejoin="round"/>
+  <path d="M479 276 673 218M491 307 685 249M503 338 638 298" stroke="#6f8195" stroke-opacity=".35" stroke-width="2" stroke-linecap="round"/>
+  <path d="M598 423 639 379 688 396 647 440Z" stroke="#b3bec9" stroke-opacity=".48" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M631 533 650 584 666 569 686 573 668 522" fill="#1b2735" stroke="#93a4b8" stroke-opacity=".6" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M409 284 437 275M435 354 464 345M462 424 491 415M489 494 518 485" stroke="#8796a7" stroke-opacity=".45" stroke-width="3"/>
+  <path d="M351 662H867" stroke="#4b5867" stroke-opacity=".4" stroke-width="2"/>
+</svg>

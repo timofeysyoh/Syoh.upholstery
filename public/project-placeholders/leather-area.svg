@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Схематична ілюстрація ділянки обшивки площею один квадратний метр</title>
+  <defs>
+    <linearGradient id="edge" x1="416" y1="188" x2="795" y2="571" gradientUnits="userSpaceOnUse"><stop stop-color="#b3beca" stop-opacity=".8"/><stop offset=".5" stop-color="#5b6978" stop-opacity=".6"/><stop offset="1" stop-color="#8997a5" stop-opacity=".6"/></linearGradient>
+    <linearGradient id="leather" x1="465" y1="210" x2="747" y2="551" gradientUnits="userSpaceOnUse"><stop stop-color="#28323d"/><stop offset=".55" stop-color="#1b232c"/><stop offset="1" stop-color="#11171e"/></linearGradient>
+    <clipPath id="swatch"><rect x="431" y="223" width="354" height="354" rx="13"/></clipPath>
+  </defs>
+  <rect x="428" y="208" width="400" height="400" rx="22" fill="#0e141b" stroke="#4d5c6d" stroke-opacity=".6" stroke-width="2"/>
+  <rect x="408" y="188" width="400" height="400" rx="22" fill="url(#leather)" stroke="url(#edge)" stroke-width="3"/>
+  <rect x="427" y="207" width="362" height="362" rx="15" stroke="#a7b4c2" stroke-opacity=".4" stroke-width="2" stroke-dasharray="3 7"/>
+  <g clip-path="url(#swatch)" stroke="#8c9bad" stroke-opacity=".2" stroke-width="2">
+    <path d="M337 215 737 615M417 215 817 615M497 215 897 615M577 215 977 615M657 215 1057 615M257 215 657 615M177 215 577 615"/>
+    <path d="M877 215 477 615M797 215 397 615M717 215 317 615M637 215 237 615M557 215 157 615M957 215 557 615M1037 215 637 615"/>
+  </g>
+  <path d="M747 588V547Q747 527 768 527H808" fill="#151f2b" stroke="#94a4b6" stroke-opacity=".6" stroke-width="2"/>
+  <path d="M749 586 807 529" stroke="#a7b5c5" stroke-opacity=".4" stroke-width="2"/>
+  <g stroke="#8899ad" stroke-opacity=".55" stroke-width="2" stroke-linecap="round">
+    <path d="M408 170V130M808 170V130M412 144H548M668 144H804M420 137 412 144 420 151M796 137 804 144 796 151"/>
+    <path d="M390 188H350M390 588H350M364 192V340M364 436V584M357 200 364 192 371 200M357 576 364 584 371 576"/>
+  </g>
+  <g fill="#bdc8d4" fill-opacity=".85" font-family="Arial, sans-serif" font-size="32" text-anchor="middle">
+    <text x="608" y="155">1 м</text>
+    <text x="364" y="399">1 м</text>
+  </g>
+  <path d="M405 647H831" stroke="#4b5867" stroke-opacity=".4" stroke-width="2"/>
+</svg>

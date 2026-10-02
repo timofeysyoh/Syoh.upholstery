@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Схематична ілюстрація перетяжки сидіння та спинки стільця</title>
+  <defs>
+    <linearGradient id="edge" x1="452" y1="148" x2="748" y2="652" gradientUnits="userSpaceOnUse"><stop stop-color="#b3beca" stop-opacity=".8"/><stop offset=".5" stop-color="#5b6978" stop-opacity=".6"/><stop offset="1" stop-color="#8997a5" stop-opacity=".6"/></linearGradient>
+    <linearGradient id="leather" x1="600" y1="164" x2="600" y2="505" gradientUnits="userSpaceOnUse"><stop stop-color="#28313b"/><stop offset="1" stop-color="#11171e"/></linearGradient>
+  </defs>
+  <path d="M473 319 455 650H478L501 319M699 319 722 650H745L727 319" fill="#111820" stroke="url(#edge)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M459 186Q457 151 492 147Q600 130 708 147Q743 151 741 186L726 332Q724 354 701 356Q600 367 499 356Q476 354 474 332Z" fill="url(#leather)" stroke="url(#edge)" stroke-width="3"/>
+  <path d="M478 188Q476 170 494 168Q600 151 706 168Q724 170 722 188L709 328Q708 337 696 338Q600 349 504 338Q492 337 491 328Z" stroke="#9ba9b8" stroke-opacity=".38" stroke-width="2" stroke-dasharray="3 7"/>
+  <path d="M538 164 534 342M600 159V346M662 164 666 342" stroke="#718296" stroke-opacity=".3" stroke-width="2"/>
+  <path d="M463 417Q600 390 737 417L768 480Q770 498 751 503Q600 532 449 503Q430 498 432 480Z" fill="url(#leather)" stroke="url(#edge)" stroke-width="3"/>
+  <path d="M478 430Q600 408 722 430L744 478Q600 502 456 478Z" stroke="#a5b1bd" stroke-opacity=".4" stroke-width="2" stroke-dasharray="3 7" stroke-linejoin="round"/>
+  <path d="M437 483Q600 516 763 483M468 510 481 657H505L498 515M702 515 695 657H719L732 510" stroke="url(#edge)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M490 594H710M482 639H501M699 639H718" stroke="#7c8b9c" stroke-opacity=".5" stroke-width="3"/>
+  <path d="M391 680H809" stroke="#4b5867" stroke-opacity=".4" stroke-width="2"/>
+</svg>

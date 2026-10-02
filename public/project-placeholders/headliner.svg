@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Схематична ілюстрація обшивки стелі автомобільного салону</title>
+  <defs>
+    <linearGradient id="panel" x1="509" y1="183" x2="685" y2="595" gradientUnits="userSpaceOnUse"><stop stop-color="#344145"/><stop offset=".52" stop-color="#263337"/><stop offset="1" stop-color="#172327"/></linearGradient>
+    <linearGradient id="center" x1="600" y1="211" x2="600" y2="522" gradientUnits="userSpaceOnUse"><stop stop-color="#29373b"/><stop offset="1" stop-color="#202c30"/></linearGradient>
+    <linearGradient id="trim" x1="306" y1="245" x2="903" y2="575" gradientUnits="userSpaceOnUse"><stop stop-color="#a8b8b8" stop-opacity=".7"/><stop offset=".5" stop-color="#425c5e" stop-opacity=".5"/><stop offset="1" stop-color="#7d999a" stop-opacity=".65"/></linearGradient>
+    <pattern id="fabric" width="8" height="8" patternUnits="userSpaceOnUse"><path d="m1 2 2 1m2 3 2-1" stroke="#b2c4c4" stroke-opacity=".06" stroke-width="1" stroke-linecap="round"/></pattern>
+    <clipPath id="roof-shape"><path d="M432 182Q600 146 768 182Q804 189 819 220L930 498Q947 543 908 565Q600 618 292 565Q253 543 270 498L381 220Q396 189 432 182Z"/></clipPath>
+  </defs>
+  <path d="M432 197Q600 161 768 197Q804 204 819 235L932 510Q945 554 908 578Q600 631 292 578Q255 554 268 510L381 235Q396 204 432 197Z" fill="#10181c" stroke="url(#trim)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M432 182Q600 146 768 182Q804 189 819 220L930 498Q947 543 908 565Q600 618 292 565Q253 543 270 498L381 220Q396 189 432 182Z" fill="url(#panel)" stroke="url(#trim)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M440 204Q600 172 760 204Q788 210 799 237L905 500Q918 528 896 545Q600 595 304 545Q282 528 295 500L401 237Q412 210 440 204Z" stroke="#91a6a8" stroke-opacity=".45" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M463 229Q600 204 737 229Q759 232 768 253L847 453Q856 478 830 485Q600 520 370 485Q344 478 353 453L432 253Q441 232 463 229Z" fill="url(#center)" stroke="#0c1114" stroke-opacity=".4" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M467 236Q600 211 733 236M364 467Q600 505 836 467" stroke="#91a6a8" stroke-opacity=".23" stroke-width="2" stroke-linecap="round"/>
+  <path d="M264 156H936V616H264Z" fill="url(#fabric)" clip-path="url(#roof-shape)"/>
+  <path d="M329 494 502 517Q515 519 513 532L508 561Q506 574 492 572L319 547Q306 545 309 532L315 506Q317 493 329 494Z" fill="#162226" stroke="url(#trim)" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M871 494 698 517Q685 519 687 532L692 561Q694 574 708 572L881 547Q894 545 891 532L885 506Q883 493 871 494Z" fill="#162226" stroke="url(#trim)" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M338 508 493 529M862 508 707 529" stroke="#91a6a8" stroke-opacity=".35" stroke-width="2" stroke-linecap="round"/>
+  <path d="M391 518 445 526 441 546 387 538ZM809 518 755 526 759 546 813 538Z" fill="#253438" stroke="#698184" stroke-opacity=".35" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M571 469Q600 466 629 469Q638 470 640 480L648 535Q649 549 635 551Q600 555 565 551Q551 549 552 535L560 480Q562 470 571 469Z" fill="#10181c" stroke="url(#trim)" stroke-width="2"/>
+  <path d="M574 481H626L630 508Q600 512 570 508Z" fill="#71878a" fill-opacity=".45" stroke="#a3b8b9" stroke-opacity=".4" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M573 524H589V539H571ZM611 524H627L629 539H611Z" fill="#263639" stroke="#698184" stroke-opacity=".45" stroke-width="1.5" stroke-linejoin="round"/>
+  <path d="M364 344 351 374Q348 382 353 385L360 388Q367 391 370 383L383 353Q386 345 380 342L374 340Q367 337 364 344ZM836 344 849 374Q852 382 847 385L840 388Q833 391 830 383L817 353Q814 345 820 342L826 340Q833 337 836 344Z" fill="#172327" stroke="#91a6a8" stroke-opacity=".45" stroke-width="2"/>
+  <path d="M438 658H762" stroke="#415359" stroke-opacity=".45"/>
+</svg>

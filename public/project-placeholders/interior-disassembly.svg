@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750" fill="none">
+  <title>Інструменти для демонтажу деталей салону автомобіля</title>
+  <defs>
+    <linearGradient id="plastic" x1="-52" y1="-180" x2="45" y2="170" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#35494d"/>
+      <stop offset=".45" stop-color="#202e32"/>
+      <stop offset="1" stop-color="#10181b"/>
+    </linearGradient>
+    <linearGradient id="handle" x1="-27" y1="25" x2="28" y2="185" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#34464a"/>
+      <stop offset=".5" stop-color="#1b292d"/>
+      <stop offset="1" stop-color="#0c1114"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="-45" y1="-185" x2="35" y2="95" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a8b8b8"/>
+      <stop offset=".23" stop-color="#698184"/>
+      <stop offset=".5" stop-color="#91a6a8"/>
+      <stop offset=".76" stop-color="#425c5e"/>
+      <stop offset="1" stop-color="#7d999a"/>
+    </linearGradient>
+    <linearGradient id="edge" x1="-55" y1="-170" x2="30" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#a3b8b9" stop-opacity=".8"/>
+      <stop offset=".5" stop-color="#698184" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#45595e" stop-opacity=".7"/>
+    </linearGradient>
+    <linearGradient id="socket" x1="-28" y1="0" x2="29" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#425c5e"/>
+      <stop offset=".3" stop-color="#91a6a8"/>
+      <stop offset=".6" stop-color="#698184"/>
+      <stop offset="1" stop-color="#273739"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Broad plastic lever with a curved, beveled wedge. -->
+  <g transform="translate(265 369) rotate(-24)">
+    <path d="M-54-167Q-4-191 49-176L47-141Q44-119 29-104L21 123Q21 160 0 174Q-23 163-24 129L-30-103Q-50-123-54-167Z" fill="#0c1114" fill-opacity=".25" transform="translate(5 7)"/>
+    <path d="M-54-167Q-4-191 49-176L47-141Q44-119 29-104L21 123Q21 160 0 174Q-23 163-24 129L-30-103Q-50-123-54-167Z" fill="url(#plastic)" stroke="url(#edge)" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M-54-167Q-4-191 49-176L47-157Q-4-164-49-151Z" fill="#698184" fill-opacity=".35"/>
+    <path d="M-46-169Q-3-184 41-174M-44-146Q-4-158 39-151" stroke="#a3b8b9" stroke-opacity=".5" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M-21-102Q-10-61-12-15L-13 115Q-13 145-1 153" stroke="#91a6a8" stroke-opacity=".3" stroke-width="3" stroke-linecap="round"/>
+    <path d="M14-86 10 119" stroke="#0c1114" stroke-opacity=".6" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-10 105H10M-10 116H10M-9 127H9" stroke="#698184" stroke-opacity=".3" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cy="-69" r="5" stroke="#698184" stroke-opacity=".45" stroke-width="2"/>
+  </g>
+
+  <!-- Slim plastic lever with a fork for lifting trim clips. -->
+  <g transform="translate(458 382) rotate(11)">
+    <path d="M-29-173H-10L-9-142Q0-135 9-142L10-173H29L26-132Q25-113 16-103L17 139Q17 166 0 174Q-17 166-17 139L-16-103Q-25-113-26-132Z" fill="#0c1114" fill-opacity=".25" transform="translate(5 7)"/>
+    <path d="M-29-173H-10L-9-142Q0-135 9-142L10-173H29L26-132Q25-113 16-103L17 139Q17 166 0 174Q-17 166-17 139L-16-103Q-25-113-26-132Z" fill="url(#plastic)" stroke="url(#edge)" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M-27-171H-12L-12-158H-26ZM12-171H27L26-158H12Z" fill="#91a6a8" fill-opacity=".3"/>
+    <path d="M-21-155-19-131Q-18-118-10-109L-10 135Q-10 151-2 158" stroke="#91a6a8" stroke-opacity=".35" stroke-width="2.5" stroke-linecap="round"/>
+    <path d="M9-96 10 128" stroke="#0c1114" stroke-opacity=".65" stroke-width="4" stroke-linecap="round"/>
+    <path d="M-7 112H7M-7 122H7M-7 132H7" stroke="#698184" stroke-opacity=".35" stroke-width="2" stroke-linecap="round"/>
+  </g>
+
+  <!-- Steel clip remover with a split, bent head and molded grip. -->
+  <g transform="translate(685 363) rotate(-12)">
+    <path d="M-43-169-12-180-10-147Q0-137 10-147L12-180 43-169 34-130Q30-115 13-103L11 44H-11L-13-103Q-30-115-34-130Z" fill="#0c1114" fill-opacity=".25" transform="translate(5 7)"/>
+    <path d="M-43-169-12-180-10-147Q0-137 10-147L12-180 43-169 34-130Q30-115 13-103L11 44H-11L-13-103Q-30-115-34-130Z" fill="url(#steel)" stroke="#91a6a8" stroke-opacity=".65" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M-39-164-17-172M17-172 39-164M-27-132Q-21-116-7-110L-6 33" stroke="#a8b8b8" stroke-opacity=".65" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-30-124Q0-110 30-124" stroke="#273739" stroke-opacity=".45" stroke-width="3" stroke-linecap="round"/>
+    <path d="M-19 30Q-30 36-29 54L-26 160Q-25 184 0 189Q25 184 26 160L29 54Q30 36 19 30Z" fill="url(#handle)" stroke="url(#edge)" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M-17 46Q-20 90-17 146Q-17 165-7 175" stroke="#91a6a8" stroke-opacity=".3" stroke-width="3" stroke-linecap="round"/>
+    <path d="M16 52 14 153" stroke="#0c1114" stroke-opacity=".75" stroke-width="5" stroke-linecap="round"/>
+    <path d="M-21 68Q0 74 21 68M-21 84Q0 90 21 84M-21 100Q0 106 21 100M-20 116Q0 122 20 116M-19 132Q0 138 19 132" stroke="#698184" stroke-opacity=".28" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Compact ratchet, with its short socket shown beside the head. -->
+  <g transform="translate(923 363) rotate(22)">
+    <path d="M-48-119Q-51-165-17-179Q20-190 45-156Q68-119 36-91L15-72 14 81H-14L-15-72Q-45-87-48-119Z" fill="#0c1114" fill-opacity=".25" transform="translate(5 7)"/>
+    <path d="M-48-119Q-51-165-17-179Q20-190 45-156Q68-119 36-91L15-72 14 81H-14L-15-72Q-45-87-48-119Z" fill="url(#steel)" stroke="#91a6a8" stroke-opacity=".7" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M-35-133Q-33-165-8-169Q18-173 34-148M-7-72V65" stroke="#a8b8b8" stroke-opacity=".7" stroke-width="3" stroke-linecap="round"/>
+    <circle cy="-130" r="29" fill="#273739" stroke="#a3b8b9" stroke-opacity=".75" stroke-width="2.5"/>
+    <circle cy="-130" r="20" fill="#698184" stroke="#a8b8b8" stroke-opacity=".65" stroke-width="2"/>
+    <rect x="-8" y="-138" width="16" height="16" rx="2" fill="#10181b" stroke="#a3b8b9" stroke-opacity=".7" stroke-width="2"/>
+    <path d="M-12-90Q0-98 12-90L8-82H-8Z" fill="#273739" stroke="#91a6a8" stroke-opacity=".65" stroke-width="1.5"/>
+    <path d="M-14 63Q-25 68-24 83L-21 163Q-20 184 0 190Q20 184 21 163L24 83Q25 68 14 63Z" fill="url(#handle)" stroke="url(#edge)" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M-15 83-13 150Q-12 169-3 176" stroke="#91a6a8" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+    <path d="M15 86 12 157" stroke="#0c1114" stroke-opacity=".7" stroke-width="4" stroke-linecap="round"/>
+    <path d="M-16 107Q0 112 16 107M-16 122Q0 127 16 122M-15 137Q0 142 15 137M-14 152Q0 157 14 152" stroke="#698184" stroke-opacity=".3" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(1046 300) rotate(22)">
+    <path d="M-27-22H27V22Q25 36 0 37Q-25 36-27 22Z" fill="url(#socket)" stroke="#91a6a8" stroke-opacity=".7" stroke-width="2.5"/>
+    <ellipse cy="-22" rx="27" ry="13" fill="#7d999a" stroke="#a8b8b8" stroke-opacity=".7" stroke-width="2.5"/>
+    <path d="M-15-26 0-31 15-26V-18L0-13-15-18Z" fill="#10181b" stroke="#425c5e" stroke-width="2" stroke-linejoin="round"/>
+    <path d="M-19-9V18M-12-6V20" stroke="#a8b8b8" stroke-opacity=".5" stroke-width="2" stroke-linecap="round"/>
+    <path d="M-24 20Q0 31 24 20" stroke="#273739" stroke-opacity=".6" stroke-width="3" stroke-linecap="round"/>
+  </g>
+</svg>
