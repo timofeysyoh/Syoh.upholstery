@@ -1,0 +1,129 @@
+<section class="workshop" id="workshop" aria-labelledby="workshop-title">
+  <div class="workshop-card">
+    <div class="workshop-information">
+      <p class="eyebrow">СЬОХ / Syoh</p>
+      <h2 id="workshop-title">Інформація про майстерню</h2>
+
+      <dl class="workshop-details">
+        <div>
+          <dt>Місто</dt>
+          <dd>{{ location().city || 'Уточнюйте у менеджера' }}</dd>
+        </div>
+        <div>
+          <dt>Адреса</dt>
+          <dd>{{ location().address || 'Уточнюйте у менеджера' }}</dd>
+        </div>
+        <div>
+          <dt>Графік</dt>
+          <dd>{{ location().hours }}</dd>
+        </div>
+      </dl>
+
+      <ul class="handover-options">
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="m5 8 1.5-4h11L19 8M4 8h16a1 1 0 0 1 1 1v8H3V9a1 1 0 0 1 1-1ZM6 17v3M18 17v3M6 12h2M16 12h2" />
+          </svg>
+          <div>
+            <h3>Приїжджайте на автомобілі</h3>
+            <p>У майстерні знімемо будь-які елементи салону, які потрібно обшити чи відновити.</p>
+          </div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M8 3h5a3 3 0 0 1 3 3v7H8V3Zm0 10H5v4h14v-4h-3M7 17v4M17 17v4M11 7h2" />
+          </svg>
+          <div>
+            <h3>Привозьте зняту деталь</h3>
+            <p>Можна передати вже демонтовану деталь або іншу річ для оздоблення.</p>
+          </div>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="m3 7 9-4 9 4v10l-9 4-9-4V7Zm0 0 9 4 9-4M12 11v10M7.5 5l9 4v4" />
+          </svg>
+          <div>
+            <h3>Надсилайте поштою</h3>
+            <p>Якщо не маєте можливості приїхати особисто, можете надіслати деталь чи предмет поштою.</p>
+          </div>
+        </li>
+      </ul>
+
+      <p class="handover-note">Перед візитом або відправленням погодьте з <button class="manager-link" type="button" aria-haspopup="dialog" (click)="contactRequested.emit()">менеджером</button> деталі роботи й передачі.</p>
+    </div>
+
+    <div class="workshop-map">
+      <div class="map-viewport" [class.is-loaded]="mapLoaded() && mapEmbedUrl()">
+        @if (mapEmbedUrl(); as embedUrl) {
+          @if (mapLoaded()) {
+            <iframe
+              [src]="embedUrl"
+              title="Розташування майстерні СЬОХ / Syoh на Google Maps"
+              referrerpolicy="no-referrer"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+          }
+        }
+
+        @if (!mapLoaded() || !mapEmbedUrl()) {
+          <svg class="map-art" viewBox="0 0 720 820" fill="none" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+            <defs>
+              <pattern id="workshop-map-grid" width="44" height="44" patternUnits="userSpaceOnUse">
+                <path d="M44 0H0v44" stroke="#b4c2d1" stroke-opacity=".045" />
+              </pattern>
+              <linearGradient id="workshop-map-road" x1="0" y1="0" x2="720" y2="820" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#c0ccd9" stop-opacity=".17" />
+                <stop offset="1" stop-color="#758395" stop-opacity=".04" />
+              </linearGradient>
+              <radialGradient id="workshop-map-light" cx="0" cy="0" r="1" gradientTransform="translate(360 355) rotate(90) scale(420 380)" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#455467" stop-opacity=".24" />
+                <stop offset="1" stop-color="#15181d" stop-opacity="0" />
+              </radialGradient>
+            </defs>
+            <path fill="#111418" d="M0 0h720v820H0z" />
+            <path fill="url(#workshop-map-grid)" d="M0 0h720v820H0z" />
+            <path fill="url(#workshop-map-light)" d="M0 0h720v820H0z" />
+            <g stroke="url(#workshop-map-road)" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M-60 600 190 350l135 95L790-20" stroke-width="39" />
+              <path d="m-80 110 300 225L540 655l240 75" stroke-width="29" />
+              <path d="m125-60 135 260L720 430" stroke-width="22" />
+              <path d="m-20 760 200-170 100 10 105 210" stroke-width="20" />
+              <path d="m525-10-85 200 30 125M570 485l130-110" stroke-width="14" />
+            </g>
+            <g stroke="#a9b9cc" stroke-opacity=".16" stroke-width="1.2" stroke-dasharray="5 9">
+              <path d="M-60 600 190 350l135 95L790-20" />
+              <path d="m-80 110 300 225L540 655l240 75" />
+            </g>
+          </svg>
+          <div class="map-state">
+            <span class="map-symbol" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none"><path d="M16 28s9-8.1 9-17a9 9 0 1 0-18 0c0 8.9 9 17 9 17Z" /><circle cx="16" cy="11" r="3" /></svg>
+            </span>
+            @if (mapEmbedUrl()) {
+              <p>Знайдіть нас на карті</p>
+              <button class="map-button" type="button" (click)="mapLoaded.set(true)">Показати карту</button>
+              <span class="map-provider">Карту надає Google Maps</span>
+            } @else {
+              <p>Адресу та маршрут<br />уточнюйте у менеджера</p>
+            }
+          </div>
+        }
+      </div>
+      <div class="map-caption">
+        <div>
+          <h3>Розташування майстерні</h3>
+          @if (location().city || location().address) {
+            <p>{{ location().city }}{{ location().city && location().address ? ', ' : '' }}{{ location().address }}</p>
+          }
+        </div>
+        @if (mapUrl(); as routeUrl) {
+          <a [href]="routeUrl" target="_blank" rel="noopener noreferrer" aria-label="Відкрити маршрут до майстерні у Google Maps">
+            Маршрут
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10" /></svg>
+          </a>
+        }
+      </div>
+    </div>
+  </div>
+</section>

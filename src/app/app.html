@@ -226,10 +226,15 @@
     </div>
   </section>
   <app-pricing />
+  <app-workshop [location]="workshopLocation" (contactRequested)="openContact()" />
 </main>
 
 <footer class="site-footer">
   <p>© 2026 СЬОХ / Syoh</p>
+  <nav class="footer-links" aria-label="Інформація про сайт">
+    <a class="footer-privacy" routerLink="/privacy-policy">Privacy Policy</a>
+    <a class="footer-privacy" routerLink="/legal-information">Правова інформація</a>
+  </nav>
 </footer>
 
 <dialog
@@ -259,4 +264,5 @@
 
 <app-support-dialog (requestFormRequested)="openSupportRequest()" />
 
-<app-support-request-dialog />
+<app-support-request-dialog (contactRequested)="openContact()" />
+

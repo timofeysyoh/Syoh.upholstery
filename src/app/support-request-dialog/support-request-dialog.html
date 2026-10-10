@@ -2,11 +2,11 @@
   #requestDialog
   class="support-request-dialog contact-modal"
   id="support-request-dialog"
-  aria-labelledby="support-request-title"
+  [attr.aria-labelledby]="submissionState() === 'sent' ? 'support-request-success-title' : 'support-request-title'"
   (close)="onClosed()"
   (click)="onBackdropClick($event)"
 >
-  <div class="contact-modal__layout">
+  <div class="contact-modal__layout" [class.contact-modal__layout--success]="submissionState() === 'sent'">
     <button
       class="policy-close contact-modal__close"
       type="button"
@@ -22,15 +22,28 @@
     <article class="policy-content contact-modal__panel">
       <h2 id="support-request-title" class="sr-only">Звернення до підтримки</h2>
 
-      <form class="contact-form" (submit)="preventSubmission($event)">
+      @if (submissionState() === 'sent') {
+        <section class="submission-success" role="status" aria-live="polite">
+          <svg class="submission-success__icon" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
+            <circle cx="24" cy="24" r="21" stroke="currentColor" stroke-width="1.5" />
+            <path d="m14 24 7 7 13-14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <h3 #successTitle id="support-request-success-title" class="submission-success__title" tabindex="-1">Повідомлення надіслано</h3>
+          <p class="submission-success__message">Дякуємо за звернення! Очікуйте на відповідь на вказану електронну пошту.</p>
+          <p class="submission-success__follow-up">Якщо не отримаєте відповіді, напишіть <button class="submission-manager-link" type="button" aria-haspopup="dialog" (click)="openManager()">менеджеру</button>.</p>
+        </section>
+      } @else {
+      <form class="contact-form" [attr.aria-busy]="submissionState() === 'sending'" (submit)="submitRequest($event)">
         <div class="contact-form__grid">
           <div class="contact-input">
             <input
               id="support-full-name"
+              name="fullName"
               class="contact-input__field"
               type="text"
               placeholder=" "
               autocomplete="name"
+              [readOnly]="submissionState() === 'sending'"
               autofocus
               required
             >
@@ -42,7 +55,9 @@
           <div class="contact-input contact-input--select">
             <select
               id="support-purpose"
+              name="purpose"
               class="contact-input__field contact-input__select"
+              [disabled]="submissionState() === 'sending'"
               required
             >
               <option value="" selected disabled hidden></option>
@@ -59,10 +74,12 @@
           <div class="contact-input">
             <input
               id="support-email"
+              name="email"
               class="contact-input__field"
               type="email"
               placeholder=" "
               autocomplete="email"
+              [readOnly]="submissionState() === 'sending'"
               required
             >
             <label class="contact-input__label" for="support-email">
@@ -73,10 +90,12 @@
           <div class="contact-input">
             <input
               id="support-mobile"
+              name="phone"
               class="contact-input__field"
               type="tel"
               placeholder=" "
               autocomplete="tel"
+              [readOnly]="submissionState() === 'sending'"
             >
             <label class="contact-input__label" for="support-mobile">Номер телефону</label>
           </div>
@@ -86,10 +105,12 @@
           <textarea
             #requestMessage
             id="support-message"
+            name="message"
             class="contact-input__field contact-input__field--textarea"
             maxlength="1500"
             placeholder=" "
             rows="5"
+            [readOnly]="submissionState() === 'sending'"
             aria-describedby="support-message-counter"
             (input)="updateMessageLength(requestMessage.value)"
             required
@@ -103,7 +124,7 @@
         <div class="contact-form__footer">
           <div class="contact-form__consent">
             <div class="contact-checkbox">
-              <input id="support-consent" type="checkbox" required>
+              <input id="support-consent" name="informationConfirmed" type="checkbox" [disabled]="submissionState() === 'sending'" required>
               <label for="support-consent" style="--size: 30px" aria-label="Підтвердити достовірність інформації та відсутність шахрайських намірів">
                 <svg viewBox="0 0 50 50" aria-hidden="true">
                   <path d="M5 30 L 20 45 L 45 5"></path>
@@ -116,8 +137,8 @@
             </label>
           </div>
 
-          <button class="contact-send-button" type="submit">
-            <span>Надіслати</span>
+          <button class="contact-send-button" type="submit" [disabled]="submissionState() === 'sending'">
+            <span>{{ submissionState() === 'sending' ? 'Надсилання…' : 'Надіслати' }}</span>
             <svg
               class="contact-send-button__icon"
               viewBox="0 0 38 15"
@@ -131,7 +152,11 @@
             </svg>
           </button>
         </div>
+        @if (submissionNotice(); as notice) {
+          <p class="submission-notice" role="alert">{{ notice }} <button class="submission-manager-link" type="button" aria-haspopup="dialog" (click)="openManager()">Написати менеджеру</button>.</p>
+        }
       </form>
+      }
     </article>
   </div>
 </dialog>

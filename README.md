@@ -1,59 +1,108 @@
-# Brandsyoh
+# СЬОХ / Syoh
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.2.
+Angular-сайт майстерні. Production-збірка — статичні HTML, CSS і JavaScript; постійно запущений Node/Express-сервер для цього варіанта не потрібен.
 
-## Development server
+## Вимоги
 
-To start a local development server, run:
+- Node.js 24 (зазначено також у `.nvmrc`). Інші підтримувані Angular версії наведені в `package.json`.
+- npm; залежності зафіксовані в `package-lock.json`.
+- Сайт розгортається в корені домену, не в підкаталозі: `<base href="/">` і шляхи зображень розраховані на це.
 
-```bash
-ng serve
+## Збірка для хостингу
+
+У чистому checkout спочатку встановіть залежності:
+
+```sh
+npm ci
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Побудуйте production-версію:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```sh
+npm run build:production
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Готова папка для публікації: **`dist/brandsyoh/browser`**. Команда `npm run build` також використовує статичну production-конфігурацію.
 
-```bash
-ng generate --help
+Angular попередньо генерує сторінки:
+
+- `/` → `index.html`;
+- `/privacy-policy` → `privacy-policy/index.html`;
+- `/legal-information` → `legal-information/index.html`.
+
+CSS/JS мінімізуються, імена збірок містять хеші для коректного оновлення кешу. Обмеження розміру збірки залишено ввімкненими. Залежності не потрібно встановлювати на самому статичному хостингу, якщо завантажуєте вже зібрану папку.
+
+## Локальний перегляд production-версії
+
+```sh
+npm run preview:production
 ```
 
-## Building
+Відкрийте `http://127.0.0.1:4300/`. Інший порт:
 
-To build the project run:
-
-```bash
-ng build
+```sh
+npm run preview:production -- --port 4301
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Перегляд працює тільки локально, не відкриває сервер у мережу й не є production-сервером. Він віддає готові файли та повертає HTTP 404 для невідомих адрес і відсутніх ресурсів. Не відкривайте `index.html` через `file://`.
 
-## Running unit tests
+## Налаштування статичного хостингу
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+| Параметр | Значення |
+| --- | --- |
+| Команда збірки | `npm run build:production` |
+| Каталог публікації | `dist/brandsyoh/browser` |
+| Версія Node під час збірки | `24` |
+| Стартова команда сервера | Не потрібна |
 
-```bash
-ng test
+Якщо хостинг не збирає проєкт сам, завантажте **вміст** `dist/brandsyoh/browser` у корінь сайту. Не завантажуйте `src`, `node_modules`, конфігурації, `.env` або папку `server`.
+
+Хостинг має підтримувати:
+
+- HTTPS для фінального домену;
+- `index.html` як індекс каталогу, зокрема для `/privacy-policy` і `/legal-information`;
+- `404.html` як сторінку невідомої адреси зі статусом **404**, а не 200;
+- коректні MIME-типи для JS/CSS/SVG та стиснення Brotli/gzip, якщо доступне.
+
+Не налаштовуйте загальне перенаправлення всіх запитів на головний `index.html`: усі наявні маршрути вже мають власні HTML-файли, а відсутній JS/малюнок повинен повертати 404.
+
+### Заголовки та кеш
+
+`public/_headers` автоматично копіюється в готову папку. Його застосовують хостинги, що підтримують формат `_headers`; на інших платформах ці правила потрібно перенести в налаштування сервера/CDN. Наявність файлу сама по собі не гарантує застосування заголовків на будь-якому хостингу.
+
+- HTML перевіряється на оновлення при повторному запиті.
+- JS/CSS з хешем кешуються на рік як `immutable`.
+- Зображення з незмінними назвами кешуються на годину з повторною перевіркою після закінчення строку.
+- Базові захисні заголовки забороняють вбудовування сайту в чужі фрейми та завантаження об’єктів, обмежують доступ до камери/мікрофона/геолокації й задають політику referrer. CSP навмисно не блокує потрібні Angular inline-стилі та hydration-скрипти.
+
+Для наступних оновлень публікуйте повну нову збірку атомарно. Якщо платформа не підтримує атомарні релізи, не видаляйте одразу попередні JS/CSS з хешами: відкриті вкладки можуть ще завантажувати старі lazy-чанки.
+
+## Після вибору домену
+
+Публікація в обліковий запис хостингу й налаштування DNS не виконуються командами вище. Для запуску потрібно вибрати хостинг, прив’язати справжній домен та ввімкнути HTTPS. Canonical URL, `og:url` і sitemap з абсолютними адресами варто додати вже з реальним доменом — у репозиторії немає вигаданої адреси.
+
+`robots.txt` дозволяє індексацію. Для публічного тестового середовища окремо налаштуйте захист доступу або `noindex` на хостингу; не вважайте `robots.txt` захистом приватних даних.
+
+## Функції поза статичним хостингом
+
+- Форма звернення наразі **не відправляє повідомлення**. Для доставки на email потрібен окремий backend/serverless endpoint; секрети пошти не можна вбудовувати в браузерний код.
+- Telegram-кнопка активується після додавання справжнього посилання в `src/app/home.ts`. Instagram уже підключений.
+- Дані розташування та графік задаються в `src/app/workshop/workshop.data.ts`. Перед публікацією замініть тимчасові місто й адресу на справжні; посилання карти формуються з цих полів. Google Maps завантажується тільки після натискання «Показати карту».
+- Зміст каталогу, фотографії та юридичні реквізити оновлюються окремо від технічного розгортання.
+
+## Розробка та необов’язковий SSR
+
+```sh
+npm start
 ```
 
-## Running end-to-end tests
+Dev-сервер: `http://localhost:4200/`.
 
-For end-to-end (e2e) testing, run:
+Вихідні SSR/Express-файли збережено. Якщо згодом потрібен саме Node-хостинг, а не статичні файли:
 
-```bash
-ng e2e
+```sh
+npm run build:ssr
+npm run serve:ssr:brandsyoh
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Це інший режим розгортання: йому потрібні Node-сервер, налаштування домену, HTTPS/reverse proxy та серверних заголовків. Після SSR-збірки повторно виконайте `npm run build:production`, перш ніж завантажувати пакет на статичний хостинг.

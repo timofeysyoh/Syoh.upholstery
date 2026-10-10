@@ -20,6 +20,11 @@
         "build": {
           "builder": "@angular/build:application",
           "options": {
+            "outputPath": {
+              "base": "dist/brandsyoh",
+              "browser": "browser",
+              "server": "server"
+            },
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -41,6 +46,8 @@
           },
           "configurations": {
             "production": {
+              "outputMode": "static",
+              "ssr": false,
               "budgets": [
                 {
                   "type": "initial",
@@ -54,6 +61,12 @@
                 }
               ],
               "outputHashing": "all"
+            },
+            "ssr": {
+              "outputMode": "server",
+              "ssr": {
+                "entry": "src/server.ts"
+              }
             },
             "development": {
               "optimization": false,
